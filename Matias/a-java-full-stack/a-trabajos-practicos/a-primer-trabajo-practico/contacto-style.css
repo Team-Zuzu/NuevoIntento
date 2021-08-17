@@ -1,0 +1,13 @@
+#formulario{
+    width: 20vw;
+    min-width: 400px;
+    margin: auto;
+}
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+input, textarea{
+    display: inline-block;
+    margin-bottom: 20px;
+}
