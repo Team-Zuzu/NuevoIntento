@@ -7,7 +7,7 @@ body{
 }
 header{
     position: relative;
-    display: block;
+    /* display: block; */
     height: 100vh;
     width: 100vw;
     /* border: red 5px solid; */
@@ -82,30 +82,23 @@ footer{
     position: absolute;
     display: block;
     height: 300px;
-    width: 100vw;
+    width: 100vmax;
     color: #fff;
     /* border: cornflowerblue solid 3px; */
 }
+
 .contenedor-footer{
     height: 100%;
-    position: relative;
+    /* position: relative; */
     background-image: url(../assets/jpg/Footer.jpg);
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
     background-size: 100% auto;
 }
-footer nav{
-    position: absolute;
-    bottom: 30px;
-}
-footer .desing{
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
-}
-.desing p{
-    margin: 0%;
+.texto-footer{
+    margin-left: 30px;
+    padding-top: 20px;
 }
 .boton-footer{
     width: 170px;
@@ -116,4 +109,24 @@ footer .desing{
 }
 .boton-footer p{
     padding-top: 15px;
+}
+
+.footer-pie{
+    width: 100%;
+    height: 60px;
+    position:sticky;
+    background-color: #333;
+}
+footer nav{
+    position: absolute;
+    bottom: 20px;
+    margin-left: 20px;
+}
+footer .desing{
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+}
+.desing p{
+    margin: 0%;
 }
