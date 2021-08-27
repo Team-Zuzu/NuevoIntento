@@ -7,10 +7,8 @@ body{
 }
 header{
     position: relative;
-    /* display: block; */
     height: 100vh;
-    width: 100vw;
-    /* border: red 5px solid; */
+    width: 100%;
 }
 header .contenedor{
     position: absolute;
@@ -77,12 +75,26 @@ main{
 .boton-ventas p{
     padding-top: 10px;
 }
+#aux{
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+#ver-todas{
+    width: 142px;
+    height: 50px;
+    position: absolute;
+    right: 175px;
+    bottom: 20px;
+    background-color: green;
+    color: #fff;
+}
 
 footer{
     position: absolute;
     display: block;
     height: 300px;
-    width: 100vmax;
+    width: 100%;
     color: #fff;
     /* border: cornflowerblue solid 3px; */
 }
@@ -97,8 +109,8 @@ footer{
     background-size: 100% auto;
 }
 .texto-footer{
-    margin-left: 30px;
-    padding-top: 20px;
+    margin-left: 100px;
+    padding-top: 80px;
 }
 .boton-footer{
     width: 170px;
