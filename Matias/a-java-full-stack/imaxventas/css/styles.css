@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    background-color: #fff;
+}
+header{
+    position: relative;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    /* border: red 5px solid; */
+}
+header .contenedor{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/jpg/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+header h1, header h2{
+    color: #fff;
+    margin: 50px;
+}
+header h2{
+    position: absolute;
+    bottom: 100px;
+}
+header nav{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+a{
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+main{
+    text-align: center;
+}
+.caja-con-icono{
+    display: inline-block;
+    width: 310px;
+    height: 325px;
+    text-align: center;
+    /* border: red solid 5px; */
+}
+.caja-venta{
+    display: inline-block;
+    width: 310px;
+    height: 504px;
+    text-align: left;
+    border: rgb(120 120 120 / 0.5) solid 1px;
+}
+.contenedor-img{
+    width: 100%;
+    height: 232px;
+    overflow: hidden;
+}
+.contenedor-img img{
+    width: 100%;
+}
+.text-zone{
+    margin: 20px;
+}
+.boton-ventas{
+    width: 275px;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    background-color: coral;
+}
+.boton-ventas p{
+    padding-top: 10px;
+}
+
+footer{
+    position: absolute;
+    display: block;
+    height: 300px;
+    width: 100vw;
+    color: #fff;
+    /* border: cornflowerblue solid 3px; */
+}
+.contenedor-footer{
+    height: 100%;
+    position: relative;
+    background-image: url(../assets/jpg/Footer.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: 100% auto;
+}
+footer nav{
+    position: absolute;
+    bottom: 30px;
+}
+footer .desing{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+.desing p{
+    margin: 0%;
+}
+.boton-footer{
+    width: 170px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    background-color: orangered;
+}
+.boton-footer p{
+    padding-top: 15px;
+}
