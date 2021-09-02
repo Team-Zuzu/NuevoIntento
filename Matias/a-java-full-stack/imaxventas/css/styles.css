@@ -1,96 +1,125 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0%;
     background-color: #fff;
 }
-header{
+
+header {
     position: relative;
     height: 100vh;
     width: 100%;
 }
-header .contenedor{
+
+header .contenedor {
     position: absolute;
     width: 100%;
     height: 100%;
     background-image: url(../assets/jpg/header.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 100% auto;
+    background-position: 50% 75%;
 }
-header h1, header h2{
+
+header h1,
+header h2 {
     color: #fff;
     margin: 50px;
 }
-header h2{
+
+header h2 {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
+    line-height: 2em;
 }
-header nav{
+
+header nav {
     position: absolute;
     right: 50px;
     top: 50px;
 }
-a{
+
+a {
     margin: 10px;
     color: #fff;
     text-decoration: none;
 }
-main{
+
+main {
     text-align: center;
 }
-.caja-con-icono{
+
+main h2 {
+    margin-bottom: 2em;
+}
+
+.iconos-asd {
+    text-align: center;
+    word-spacing: 0.5em;
+}
+
+.caja-con-icono {
     display: inline-block;
     width: 310px;
-    height: 325px;
+    height: 240px;
     text-align: center;
     /* border: red solid 5px; */
 }
-.caja-venta{
+
+.caja-venta {
     display: inline-block;
+    position: relative;
     width: 310px;
     height: 504px;
     text-align: left;
     border: rgb(120 120 120 / 0.5) solid 1px;
 }
-.contenedor-img{
+
+.contenedor-img {
     width: 100%;
     height: 232px;
     overflow: hidden;
 }
-.contenedor-img img{
+
+.contenedor-img img {
     width: 100%;
 }
-.text-zone{
+
+.text-zone {
     margin: 20px;
 }
-.boton-ventas{
+
+.boton-ventas {
     width: 275px;
     height: 40px;
     margin: auto;
     text-align: center;
     background-color: coral;
 }
-.boton-ventas p{
+
+.boton-ventas p {
     padding-top: 10px;
 }
-#aux{
-    position: relative;
-    width: 100%;
-    height: 120px;
+
+.ventas2 {
+    margin-bottom: 150px;
 }
-#ver-todas{
+
+#ver-todas {
     width: 142px;
     height: 50px;
     position: absolute;
-    right: 175px;
-    bottom: 20px;
+    right: 0px;
+    bottom: -100px;
+    text-align: center;
     background-color: green;
     color: #fff;
 }
 
-footer{
+footer {
     position: absolute;
     display: block;
     height: 300px;
@@ -99,7 +128,7 @@ footer{
     /* border: cornflowerblue solid 3px; */
 }
 
-.contenedor-footer{
+.contenedor-footer {
     height: 100%;
     /* position: relative; */
     background-image: url(../assets/jpg/Footer.jpg);
@@ -108,37 +137,43 @@ footer{
     background-position: center;
     background-size: 100% auto;
 }
-.texto-footer{
+
+.texto-footer {
     margin-left: 100px;
     padding-top: 80px;
 }
-.boton-footer{
+
+.boton-footer {
     width: 170px;
     height: 50px;
     display: block;
     text-align: center;
     background-color: orangered;
 }
-.boton-footer p{
+
+.boton-footer p {
     padding-top: 15px;
 }
 
-.footer-pie{
+.footer-pie {
     width: 100%;
     height: 60px;
-    position:sticky;
+    position: sticky;
     background-color: #333;
 }
-footer nav{
+
+footer nav {
     position: absolute;
     bottom: 20px;
     margin-left: 20px;
 }
-footer .desing{
+
+footer .desing {
     position: absolute;
     bottom: 20px;
     right: 50px;
 }
-.desing p{
+
+.desing p {
     margin: 0%;
 }
