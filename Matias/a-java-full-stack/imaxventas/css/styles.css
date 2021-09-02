@@ -76,6 +76,7 @@ main h2 {
     height: 504px;
     text-align: left;
     border: rgb(120 120 120 / 0.5) solid 1px;
+    margin-left: 1em;
 }
 
 .contenedor-img {
@@ -97,7 +98,13 @@ main h2 {
     height: 40px;
     margin: auto;
     text-align: center;
-    background-color: coral;
+    background-color: rgb(223, 135, 23);
+    color: #fff;
+}
+
+.precio {
+    color: rgb(113, 177, 31);
+    font-weight: bolder
 }
 
 .boton-ventas p {
@@ -115,7 +122,7 @@ main h2 {
     right: 0px;
     bottom: -100px;
     text-align: center;
-    background-color: green;
+    background-color: rgb(113, 177, 31);
     color: #fff;
 }
 
@@ -148,11 +155,13 @@ footer {
     height: 50px;
     display: block;
     text-align: center;
-    background-color: orangered;
+    background-color: rgb(223, 135, 23);
 }
 
-.boton-footer p {
-    padding-top: 15px;
+.boton-footer a {
+    display: block;
+    position: relative;
+    bottom: -14px;
 }
 
 .footer-pie {
