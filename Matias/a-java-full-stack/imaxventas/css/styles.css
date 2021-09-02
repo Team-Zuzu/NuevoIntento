@@ -7,46 +7,50 @@ body {
     background-color: #fff;
 }
 
-header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
+a {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: #fff;
 }
 
-header .contenedor {
-    position: absolute;
+
+/* HEADER */
+
+header {
+    height: 100vh;
     width: 100%;
-    height: 100%;
     background-image: url(../assets/jpg/header.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
     background-position: 50% 75%;
-}
-
-header h1,
-header h2 {
     color: #fff;
-    margin: 50px;
 }
 
-header h2 {
+header>h1,
+header>h2 {
+    margin-left: 50px;
+}
+
+header>h1 {
+    position: absolute;
+    top: 50px
+}
+
+header>h2 {
     position: absolute;
     bottom: 70px;
     line-height: 2em;
 }
 
-header nav {
+header>nav {
     position: absolute;
     right: 50px;
     top: 50px;
 }
 
-a {
-    margin: 10px;
-    color: #fff;
-    text-decoration: none;
-}
+
+/* MAIN */
 
 main {
     text-align: center;
@@ -56,10 +60,8 @@ main h2 {
     margin-bottom: 2em;
 }
 
-.iconos-asd {
-    text-align: center;
-    word-spacing: 0.5em;
-}
+
+/* MAIN -> Sección 1 */
 
 .caja-con-icono {
     display: inline-block;
@@ -67,6 +69,13 @@ main h2 {
     height: 240px;
     text-align: center;
     /* border: red solid 5px; */
+}
+
+
+/* MAIN -> Sección 2 */
+
+.section-sale {
+    margin-bottom: 150px;
 }
 
 .caja-venta {
@@ -79,18 +88,28 @@ main h2 {
     margin-left: 1em;
 }
 
-.contenedor-img {
+.container-img {
     width: 100%;
     height: 232px;
     overflow: hidden;
 }
 
-.contenedor-img img {
+.container-img>img {
     width: 100%;
 }
 
 .text-zone {
     margin: 20px;
+}
+
+.precio {
+    color: rgb(113, 177, 31);
+    font-weight: bolder
+}
+
+.box-iconos {
+    text-align: center;
+    word-spacing: 0.5em;
 }
 
 .boton-ventas {
@@ -102,20 +121,11 @@ main h2 {
     color: #fff;
 }
 
-.precio {
-    color: rgb(113, 177, 31);
-    font-weight: bolder
-}
-
 .boton-ventas p {
     padding-top: 10px;
 }
 
-.ventas2 {
-    margin-bottom: 150px;
-}
-
-#ver-todas {
+.ver-todas {
     width: 142px;
     height: 50px;
     position: absolute;
@@ -126,21 +136,21 @@ main h2 {
     color: #fff;
 }
 
+
+/* FOOTER */
+
 footer {
     position: absolute;
     display: block;
     height: 300px;
     width: 100%;
     color: #fff;
-    /* border: cornflowerblue solid 3px; */
 }
 
-.contenedor-footer {
+.img-footer {
     height: 100%;
-    /* position: relative; */
     background-image: url(../assets/jpg/Footer.jpg);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-position: center;
     background-size: 100% auto;
 }
@@ -181,8 +191,5 @@ footer .desing {
     position: absolute;
     bottom: 20px;
     right: 50px;
-}
-
-.desing p {
     margin: 0%;
 }
