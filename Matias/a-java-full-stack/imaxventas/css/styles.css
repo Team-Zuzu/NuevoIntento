@@ -13,10 +13,6 @@ a {
     color: #fff;
 }
 
-h1 {
-    font-size: 4em;
-}
-
 h2,
 h3,
 p,
@@ -46,19 +42,27 @@ header>h2 {
 
 header>h1 {
     position: absolute;
-    top: 10px
+    /* top: 10px; */
+    font-size: 4em;
+    font-weight: normal;
+}
+
+header>h1>span {
+    font-family: serif;
+    font-weight: bold;
 }
 
 header>h2 {
     position: absolute;
-    bottom: 70px;
+    bottom: 30px;
     line-height: 2em;
+    font-size: 2.5em;
 }
 
 header>nav {
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 60px;
+    top: 85px;
 }
 
 
@@ -124,7 +128,7 @@ main h2 {
 
 .precio {
     color: rgb(113, 177, 31);
-    font-weight: bolder
+    font-weight: bolder;
 }
 
 .box-iconos {
