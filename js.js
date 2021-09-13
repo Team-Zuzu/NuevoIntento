@@ -16,8 +16,8 @@ document.addEventListener("keydown", function (letra) {
 
 const update = setInterval(() => {
     if (pos == trucoPorLetra.length) {
+
         clearInterval(update);
-        console.log('Hola Matías');
 
         const lista = document.getElementById('lista');
 
@@ -28,5 +28,29 @@ const update = setInterval(() => {
 
         li.appendChild(a);
         lista.insertAdjacentElement('beforeend', li);
+
+        console.log('Hola Matías');
+        SoyMatias();
+
     }
 }, 200);
+
+function SoyMatias(){
+    const body = document.querySelector('body');
+    const h1 = document.querySelector('h1');
+    const matias = document.querySelector('.matias')
+    const h2 = matias.children[0];
+    const fernando = document.querySelector('.fernando')
+    const as = document.querySelectorAll('a')
+
+    h2.textContent = 'Hola Matias!'
+
+    body.classList.toggle('active');
+    h1.classList.toggle('active');
+    fernando.classList.toggle('active');
+    matias.classList.toggle('active');
+    h2.classList.toggle('active');
+    as.forEach(a => {
+        a.classList.toggle('active');
+    });
+}
