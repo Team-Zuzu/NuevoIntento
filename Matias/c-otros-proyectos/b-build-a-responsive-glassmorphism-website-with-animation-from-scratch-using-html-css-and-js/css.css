@@ -68,7 +68,7 @@ header .toggle:before{
     background: #fff;
     color: #111;
 }
-header .toggle.toggle.active::before{
+header .toggle.active:before{
     content: 'Close';
 }
 section video{
