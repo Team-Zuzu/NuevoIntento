@@ -1,0 +1,18 @@
+<svg width="100" height="93" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-Watch_38mm_1">
+   <rect id="svg_1" height="93" width="123"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" clip-path="url(#clip-Watch_38mm_1)" data-name="Watch 38mm – 1" id="Watch_38mm_1">
+   <g stroke="null" id="icono1">
+    <g stroke="null" data-name="Group 1" id="Group_1">
+     <path stroke="null" fill="#e08709" d="m69.95543,37.54622l0,-18.6c0,-10.435 -9.243,-18.926 -20.607,-18.926s-20.609,8.491 -20.609,18.928l0,18.6l-14.838,0l0,55.472l72.54,0l0,-55.474l-16.486,0zm-37.919,-18.6c0,-8.638 7.765,-15.665 17.311,-15.665s17.311,7.028 17.311,15.665l0,18.6l-34.622,0l0,-18.6zm51.112,70.811l-65.948,0l0,-6.526l65.948,0l0,6.526zm-65.948,-9.79l0,-39.157l65.948,0l0,39.157l-65.948,0z" data-name="Path 1" id="Path_1"/>
+     <path stroke="null" fill="#e08709" d="m50.17143,50.59922a6.568,6.568 0 0 0 -6.595,6.523l0,9.791a6.595,6.595 0 1 0 13.189,0l0,-9.791a6.568,6.568 0 0 0 -6.595,-6.523l0.001,0zm3.3,16.316a3.3,3.3 0 1 1 -6.6,0l0,-9.793a3.3,3.3 0 1 1 6.6,0l0,9.793z" data-name="Path 2" id="Path_2"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
