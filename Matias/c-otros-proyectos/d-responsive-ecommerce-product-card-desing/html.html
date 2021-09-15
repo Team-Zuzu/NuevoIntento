@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>Responsive Ecommerce Product Card Desing</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 class="name">Product Name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="../z-assets/auricular-blue.png" alt="Auricular" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Product Name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="../z-assets/auricular-green.png" alt="Auricular" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Product Name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="../z-assets/auricular-red.png" alt="Auricular" class="product">
+        </div>
+    </div>
+    <script src="./vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 15,
+            speed: 1000,
+        });
+    </script>
+</body>
+
+</html>
