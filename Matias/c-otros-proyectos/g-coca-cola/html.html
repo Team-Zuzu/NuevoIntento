@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>Cola-Cola</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./assets/logo.png" alt="logo" class="logo"></a>
+            <div class="hamburguesa" onclick="MenuHamburguesa()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste the Feeling</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et dignissimos incidunt explicabo
+                    expedita ducimus corporis libero id aperiam blanditiis fuga, soluta eaque voluptate numquam officiis
+                    nihil. Enim, possimus magni!</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="./assets/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="./assets/twitter.png" alt="twiiter"></a></li>
+            <li><a href="#"><img src="./assets/instagram.png" alt="instagram"></a></li>
+        </ul>
+    </section>
+
+    <script>
+        const MenuHamburguesa = () => {
+            const hamburguesa = document.querySelector('.hamburguesa');
+            const navigation = document.querySelector('.navigation')
+
+            // Lo que hace esto es agregar o sacar una clase 
+            hamburguesa.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
