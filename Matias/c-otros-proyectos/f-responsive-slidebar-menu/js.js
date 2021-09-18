@@ -1,6 +1,6 @@
-function toggleMenu() {
+function MenuHamburguesa() {
     let navigation = document.querySelector('.navigation');
-    let toggle = document.querySelector('.toggle');
+    let hamburguesa = document.querySelector('.hamburguesa');
     navigation.classList.toggle('active');
-    toggle.classList.toggle('active');
+    hamburguesa.classList.toggle('active');
 }

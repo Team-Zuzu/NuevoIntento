@@ -75,7 +75,7 @@ body {
     white-space: nowrap;
 }
 
-.toggle {
+.hamburguesa {
     position: absolute;
     top: 0;
     right: 0;
@@ -85,7 +85,7 @@ body {
     cursor: pointer;
 }
 
-.toggle.active {
+.hamburguesa.active {
     background: #ea1d63;
 }
 
@@ -101,7 +101,7 @@ body {
     color: #fff;
 } */
 
-.toggle::before {
+.hamburguesa::before {
     content: '';
     position: absolute;
     width: 70%;
@@ -118,7 +118,7 @@ body {
     content: '\f00d';
 } */
 
-.toggle.active::before {
+.hamburguesa.active::before {
     background: url(../z-assets/cruz.svg);
     background-position: center;
     background-repeat: no-repeat;
