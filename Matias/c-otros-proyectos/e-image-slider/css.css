@@ -67,7 +67,7 @@ header .toggle {
     z-index: 1;
     clip-path: circle(0px at center);
 }
-
+/* Selecciona el primer elemento con la clase imgBx que venga después del input de tipo radio que esté clickeado */
 .slider input[type="radio"]:checked+.imgBx {
     z-index: 10;
     clip-path: circle(1000px at center);
