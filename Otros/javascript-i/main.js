@@ -23,11 +23,18 @@
 // (num1 > num2) ? document.write(`${num1} es mayor a ${num2}`) : document.write(`${num2} es mayor a ${num1}`);
 
 // 7. Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
-// let numeros = [];
 // numeros.push(parseInt(prompt('ingrese un número')));
 // numeros.push(parseInt(prompt('ingrese otro número')));
 // numeros.push(parseInt(prompt('ingrese otro número más')));
 // document.write(`${numeros[0]}, ${numeros[1]} y ${numeros[2]} fueron los números ingresados. ${Math.max(...numeros)} es el mayor de ellos.`);
+
+// 7b. Igual que la anterior pero se ingresan 100 números 
+// let numeros = [];
+// for (let i = 0; i < 100; i++) {
+//     numeros[i]=Math.round(Math.random() * (100 - 1) + 1)
+// }
+// console.log(numeros);
+// document.write(`${Math.max(...numeros)}, es el mayor de ellos.`);
 
 // 8. Escribe un programa que pida un número y diga si es divisible por 2
 // let num = prompt('Ingrese un número');
@@ -350,3 +357,122 @@
 //     return cadena;
 // }
 // document.write(PeticionRaraxD());
+
+// 26. Solicitar números hasta que ingrese -1 y decir que número es el mayor de los ingresados
+// const NumeroDeCierre = () => {
+//     let entrada = parseInt(prompt('ingrese un número'))
+//     let maximo;
+//     if (entrada != -1) {
+//         maximo = entrada;
+//         while (entrada != -1) {
+//             entrada = prompt('ingrese otro un número')
+//             maximo = (entrada > maximo) ? entrada : maximo;
+//         }
+//     }
+//     return (isNaN(maximo)) ? 'No se ingresaron números' : maximo
+// }
+// document.write(NumeroDeCierre())
+
+// 27. Hacer una piramide pero con estilo de línea monospace
+// const PiramideMonoespaciada = () => {
+//     let cadena = '<p style = "font-family: Courier New;">'
+//     for (let j = 1; j <= 30; j++) {
+//         for (let i = 0; i < j; i++) {
+//             (j < 10) ? cadena += `0${j}` : cadena += j;
+//         }
+//         cadena += '<br>';
+//     }
+//     cadena += '</p>'
+//     return cadena;
+// }
+// document.write(PiramideMonoespaciada())
+
+// 28. Comprobar si un número es divisible por 2, 3, 5 y 7 (modo inteligente)
+// const DesafioDeFer = (num) => {
+//     let cadena = ''
+//     if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0) {
+//         cadena = 'Es divisible por '
+//         if (num % 2 == 0) cadena += 2 + ', '
+//         if (num % 3 == 0) cadena += 3 + ', '
+//         if (num % 5 == 0) cadena += 5 + ', '
+//         if (num % 7 == 0) cadena += 7 + ', '
+//         cadena = cadena.substring(0, cadena.length - 2) + '.'
+//     }
+//     else cadena = 'No es divisible por nada >:((('
+//     return cadena;
+// }
+// console.log(DesafioDeFer(210));
+
+// 29. Pedir un número y pedir divisores. Comprobar si el número es divisible por los divisores. 
+// const TratamientoDeCadenas = (cadena) => {
+//     let i = 0;
+//     while (!cadena.endsWith(' ', i)) {
+//         i++;
+//     }
+//     let numero = cadena.slice(-i)
+//     cadena = cadena.substring(0, cadena.length - (i + 2))
+//     cadena += ' y ' + numero + '.'
+//     return cadena
+// }
+// const DesafioMati = (divisor, divisores) => {
+
+//     if(divisor != 0 && !isNaN(divisor)){
+//         let cadena = 'No es divisible por nada >:((('
+//         let pos = 0
+//         while (cadena == 'No es divisible por nada >:(((' && pos < divisores.length) {
+//             if (divisor % divisores[pos] == 0) cadena = 'Es divisible por '
+//             pos++
+//         }
+//         if (cadena == 'Es divisible por ') {
+//             for (let i = 0; i < divisores.length; i++) {
+//                 if (divisor % divisores[i] == 0) cadena += divisores[i] + ', '
+//             }
+//             cadena = cadena.substring(0, cadena.length - 2)
+//             cadena = TratamientoDeCadenas(cadena)
+//         }
+//         return cadena;
+//     }
+//     else return 'Querés dividir por cero o estás ingresando texto?? xD'
+// }
+// let num = 320
+// const divisores = [2, 3, 5, 7]
+// console.log(DesafioMati(num, divisores))
+
+// 30. Buscar números primos de forma epica
+// const Primos = (num) => {
+//     let cadena
+//     if (num > 0) {
+//         let divisorEncontrado = false
+//         let i = 2
+//         while (i < num && !divisorEncontrado) {
+//             if (num % i == 0) {
+//                 divisorEncontrado = true
+//                 cadena = 'no es primo'
+//             }
+//             i++;
+//         }
+//         if (!divisorEncontrado) cadena = 'es primo'
+//     }
+//     else {
+//         cadena = 'el numero debe ser mayor de 0'
+//     }
+//     return cadena
+// }
+// console.log(Primos(4));
+
+// 31. Arreglar el algoritmo de Fer 
+// let num = 11;
+// let esPrimo = false
+// for (let i = 0; i < num; i++) {
+//     if(num % i != 0 && num != 1 && num != i){
+//         // es primo
+//         esPrimo = true
+//     }
+//     else{
+//         // no es primo
+//         esPrimo = false
+//     }
+// }
+// if(esPrimo){
+//     console.log('Es primo');
+// }
