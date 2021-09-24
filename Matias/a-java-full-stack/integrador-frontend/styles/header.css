@@ -1,17 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-* {
-    outline: red solid 1px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #000;
-    min-height: 200vh;
-}
-
 header {
     position: fixed;
     width: 100%;
@@ -25,6 +11,7 @@ header {
 
 aside .hamburguesa {
     display: none;
+    z-index: 10000;
 }
 
 header .logo a {

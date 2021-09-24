@@ -1,0 +1,50 @@
+main{
+    color: #fff;
+}
+main a{
+    text-decoration: none;
+    color: #fff;
+}
+main .loby{
+    position: relative;
+    height: 100vh;
+    /* background: url(../assets/images/ba1.jpg);
+    background-size: cover;
+    background-position: 50% 0%;
+    filter: sepia(25%) opacity(75%); */
+}
+
+main .loby img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: sepia(25%) opacity(60%);
+}
+
+main .loby .zona-de-escritura{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 550px;
+    right: 0;
+    text-align: end;
+    margin-right: 10%;
+}
+
+main .loby .zona-de-escritura span{
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+main .loby .zona-de-escritura div a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: forestgreen;
+    border-radius: 5px;
+    margin-left: 20px;
+}
