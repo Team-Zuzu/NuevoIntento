@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/header.css">
     <title>Integrador Frontend</title>
 </head>
 
 <body>
     <header>
+
         <div class="logo">
-            <img src="./assets/images/codoacodo.png" alt="Logo de Codo a Codo">
-            <a href="#">Conf Bs As</a>
+            <a href="#"><img src="./assets/images/codoacodo.png" alt="Logo de Codo a Codo"><span>Conf Bs As</span></a>
         </div>
 
-        <nav>
-            <a href="#">Conferencia</a>
-            <a href="#">Oradores</a>
-            <a href="#">Lugar y fecha</a>
-            <a href="#">Conviértete en orador</a>
-            <a href="#">Comprar tickets</a>
+        <nav class="navegacion">
+            <a href="#"><i class="fas fa-user-tie"></i>Conferencia</a>
+            <a href="#"><i class="fas fa-user-tie"></i>Oradores</a>
+            <a href="#"><i class="fas fa-user-tie"></i>Lugar y fecha</a>
+            <a href="#"><i class="fas fa-user-tie"></i>Conviértete en orador</a>
+            <a href="#"><i class="fas fa-user-tie"></i>Comprar tickets</a>
         </nav>
 
     </header>
+    <aside>
+        <div class="hamburguesa" onclick="MenuHamburguesa()"></div>
+    </aside>
+
+    
     <script src="./js/header.js"></script>
 </body>
 
