@@ -9,21 +9,13 @@ header {
     transition: 0.5s;
 }
 
-aside .hamburguesa {
+header .hamburguesa {
     display: none;
+    border: none;
     z-index: 10000;
 }
 
-header .logo a {
-    position: relative;
-}
-
-header .logo a img {
-    height: 50px;
-}
-
-header .logo a span {
-    position: absolute;
+header .logo {
     width: max-content;
     font-weight: 700;
     color: #fff;
@@ -35,7 +27,7 @@ header .logo a span {
     transition: 0.5s;
 }
 
-header .navegacion a {
+header .navbar a {
     margin: 0 10px;
     text-decoration: none;
     color: hsl(0, 0%, 60%);
@@ -44,21 +36,21 @@ header .navegacion a {
     transition: 0.5s;
 }
 
-header .navegacion a:hover {
+header .navbar a:hover {
     color: #fff;
 }
 
-header .navegacion a:last-child {
+header .navbar a:last-child {
     color: greenyellow;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
-header .navegacion a:last-child:hover {
+header .navbar a:last-child:hover {
     text-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
 }
 
-header .navegacion a .fas {
+header .navbar a .fas {
     margin-right: 10px;
     font-size: 1.3em;
 }
@@ -70,28 +62,28 @@ header.sticky {
     background: #fff;
 }
 
-header.sticky .logo a span {
+header.sticky .logo {
     color: #000;
 }
 
-header.sticky .navegacion a {
+header.sticky .navbar a {
     color: hsl(0, 0%, 40%);
 }
 
-header.sticky .navegacion a:hover {
+header.sticky .navbar a:hover {
     color: #000;
 }
 
-header.sticky .navegacion a:last-child {
+header.sticky .navbar a:last-child {
     color: hsl(120, 100%, 30%)
 }
 
-header.sticky .navegacion a:last-child:hover {
+header.sticky .navbar a:last-child:hover {
     text-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
 }
 
 @media (max-width: 1200px) {
-    aside .hamburguesa {
+    header .hamburguesa {
         position: fixed;
         top: 0;
         right: 0;
@@ -105,7 +97,7 @@ header.sticky .navegacion a:last-child:hover {
         transition: 0.2s;
     }
     /* linea superior */
-    aside .hamburguesa::before {
+    header .hamburguesa::before {
         content: '';
         position: absolute;
         width: 28px;
@@ -117,7 +109,7 @@ header.sticky .navegacion a:last-child:hover {
         box-shadow: 0 10px 0 #fff;
     }
     /* linea inferior */
-    aside .hamburguesa::after {
+    header .hamburguesa::after {
         content: '';
         position: absolute;
         width: 28px;
@@ -126,14 +118,14 @@ header.sticky .navegacion a:last-child:hover {
         transition: 0.2s;
         transform: translateY(10px);
     }
-    aside .hamburguesa.active {
+    header .hamburguesa.active {
         background: #f7226a;
     }
-    aside .hamburguesa.active::before {
+    header .hamburguesa.active::before {
         transform: translateY(0px) rotate(45deg);
         box-shadow: 0 0 0 #fff;
     }
-    aside .hamburguesa.active::after {
+    header .hamburguesa.active::after {
         transform: translateY(0px) rotate(-45deg);
     }
     header {
@@ -151,12 +143,12 @@ header.sticky .navegacion a:last-child:hover {
     header:hover, header.active {
         width: 300px
     }
-    header .navegacion a {
+    header .navbar a {
         display: inline-block;
         width: 300px;
         margin: 0;
     }
-    header .navegacion a .fas {
+    header .navbar a .fas {
         display: inline-block;
         width: 60px;
         height: 60px;
@@ -164,28 +156,14 @@ header.sticky .navegacion a:last-child:hover {
         text-align: center;
     }
     header .logo {
-        height: 60px;
-    }
-    header .logo a {
         display: inline-block;
         height: 60px;
         width: 300px;
         margin: 0;
-    }
-    header .logo a img {
-        position: relative;
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-    }
-    header .logo a span {
-        position: absolute;
-        height: 60px;
-        width: 100%;
         line-height: 60px;
-        font-size: 1em;
+        font-size: 1.5em;
     }
-    header .logo a:hover, header .navegacion a:hover {
+    header .navbar a:hover {
         background: #444;
     }
 }
