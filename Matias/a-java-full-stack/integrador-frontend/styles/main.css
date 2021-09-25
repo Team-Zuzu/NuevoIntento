@@ -28,13 +28,13 @@ main .loby .zona-de-escritura{
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    max-width: 550px;
+    max-width: 480px;
     right: 0;
     text-align: end;
-    margin-right: 10%;
+    margin: 0 10vw 0 10vw;
 }
 
-main .loby .zona-de-escritura span{
+main .loby .zona-de-escritura h1{
     font-size: 2em;
     letter-spacing: 1px;
     font-weight: 600;

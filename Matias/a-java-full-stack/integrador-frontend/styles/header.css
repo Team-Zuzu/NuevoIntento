@@ -185,7 +185,34 @@ header .navbar.sticky .links a:last-child:hover {
 }
 
 @media (max-width: 600px) {
-    body {
-        background: blue;
+    header .navbar {
+        width: 0px;
+    }
+    header .navbar.active {
+        width: 100%;
+    }
+    header .links a {
+        display: block;
+        min-width: 100%;
+        text-align: center;
+    }
+    header .logo span {
+        /* display: block;
+        height: 60px;
+        width: 300px;
+        margin: 0;
+        line-height: 60px;
+        font-size: 1.5em;
+        transform: translate(70px, 0px); */
+        text-align: center;
+        transform: translate(0px, 0px);
+        /* width: 100%; */
+    }
+    header .links a .fas {
+        /* display: inline-block; */
+        width: min-content;
+        /* height: 60px; */
+        /* line-height: 60px; */
+        /* text-align: center; */
     }
 }
