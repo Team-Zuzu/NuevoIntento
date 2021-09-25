@@ -1,4 +1,4 @@
-header {
+header .navbar {
     position: fixed;
     width: 100%;
     display: flex;
@@ -9,81 +9,91 @@ header {
     transition: 0.5s;
 }
 
-header .hamburguesa {
+header .toggle {
     display: none;
     border: none;
     z-index: 10000;
 }
 
-header .logo {
+header .logo span {
     width: max-content;
+    margin-left: 77px;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
     font-size: 1.35em;
-    line-height: 55px;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.5s;
 }
 
-header .navbar a {
+header .logo span::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: url(../assets/images/codoacodo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-90px, -13px);
+}
+
+header .links a {
     margin: 0 10px;
     text-decoration: none;
     color: hsl(0, 0%, 60%);
-    /* letter-spacing: 1px; */
     font-weight: 600;
     transition: 0.5s;
 }
 
-header .navbar a:hover {
+header .links a:hover {
     color: #fff;
 }
 
-header .navbar a:last-child {
+header .links a:last-child {
     color: greenyellow;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
-header .navbar a:last-child:hover {
+header .links a:last-child:hover {
     text-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
 }
 
-header .navbar a .fas {
+header .links a .fas {
     margin-right: 10px;
     font-size: 1.3em;
 }
 
 /* VERSIONES STICKY */
 
-header.sticky {
+header .navbar.sticky {
     padding: 5px 30px;
     background: #fff;
 }
 
-header.sticky .logo {
+header .navbar.sticky .logo span {
     color: #000;
 }
 
-header.sticky .navbar a {
+header .navbar.sticky .links a {
     color: hsl(0, 0%, 40%);
 }
 
-header.sticky .navbar a:hover {
+header .navbar.sticky .links a:hover {
     color: #000;
 }
 
-header.sticky .navbar a:last-child {
+header .navbar.sticky .links a:last-child {
     color: hsl(120, 100%, 30%)
 }
 
-header.sticky .navbar a:last-child:hover {
+header .navbar.sticky .links a:last-child:hover {
     text-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
 }
 
 @media (max-width: 1200px) {
-    header .hamburguesa {
+    header .toggle {
         position: fixed;
         top: 0;
         right: 0;
@@ -97,7 +107,7 @@ header.sticky .navbar a:last-child:hover {
         transition: 0.2s;
     }
     /* linea superior */
-    header .hamburguesa::before {
+    header .toggle::before {
         content: '';
         position: absolute;
         width: 28px;
@@ -109,7 +119,7 @@ header.sticky .navbar a:last-child:hover {
         box-shadow: 0 10px 0 #fff;
     }
     /* linea inferior */
-    header .hamburguesa::after {
+    header .toggle::after {
         content: '';
         position: absolute;
         width: 28px;
@@ -118,17 +128,17 @@ header.sticky .navbar a:last-child:hover {
         transition: 0.2s;
         transform: translateY(10px);
     }
-    header .hamburguesa.active {
+    header .toggle.active {
         background: #f7226a;
     }
-    header .hamburguesa.active::before {
+    header .toggle.active::before {
         transform: translateY(0px) rotate(45deg);
         box-shadow: 0 0 0 #fff;
     }
-    header .hamburguesa.active::after {
+    header .toggle.active::after {
         transform: translateY(0px) rotate(-45deg);
     }
-    header {
+    header .navbar {
         /* width: 60px; */
         width: 60px;
         height: 100vh;
@@ -140,31 +150,37 @@ header.sticky .navbar a:last-child:hover {
         background: #333;
         /* transition: 0.5s; */
     }
-    header:hover, header.active {
+    header .navbar:hover, header .navbar.active {
         width: 300px
     }
-    header .navbar a {
+    header .links a {
         display: inline-block;
         width: 300px;
         margin: 0;
     }
-    header .navbar a .fas {
+    header .links a:hover {
+        background: #444;
+    }
+    header .links a .fas {
         display: inline-block;
         width: 60px;
         height: 60px;
         line-height: 60px;
         text-align: center;
     }
-    header .logo {
-        display: inline-block;
+    header .logo span {
+        display: block;
         height: 60px;
         width: 300px;
         margin: 0;
         line-height: 60px;
         font-size: 1.5em;
+        transform: translate(70px, 0px);
     }
-    header .navbar a:hover {
-        background: #444;
+    header .logo span::before {
+        width: 125px;
+        height: 125px;
+        transform: translate(18px, -50px);
     }
 }
 

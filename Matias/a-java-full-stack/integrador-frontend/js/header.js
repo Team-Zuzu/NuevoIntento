@@ -1,25 +1,28 @@
-let header = document.querySelector('header');
-let hamburguesa = document.querySelector('.hamburguesa');
+let navbar = document.querySelector('.navbar');
+let toggle = document.querySelector('.toggle');
 
 window.addEventListener('scroll', () => {
 
     if (window.innerWidth > 1200) {
-        header.classList.toggle('sticky', window.scrollY > 0);
+        navbar.classList.toggle('sticky', window.scrollY > 0);
     }
 })
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1200) {
-        if (window.scrollY > 0 && !header.classList.contains('sticky')) {
-            header.classList.add('sticky');
+        if (window.scrollY > 0 && !navbar.classList.contains('sticky')) {
+            navbar.classList.add('sticky');
+        }
+        if(toggle.classList.contains('active')){
+            Toggle()
         }
     }
     else {
-        header.classList.remove('sticky', header.classList.contains('sticky'));
+        navbar.classList.remove('sticky', navbar.classList.contains('sticky'));
     }
 })
 
-const MenuHamburguesa = () => {
-    header.classList.toggle('active');
-    hamburguesa.classList.toggle('active');
+const Toggle = () => {
+    navbar.classList.toggle('active');
+    toggle.classList.toggle('active');
 }
