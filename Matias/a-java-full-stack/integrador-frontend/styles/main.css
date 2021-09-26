@@ -159,11 +159,12 @@ main .speakers {
 
 main .speakers .cards-container {
     width: 100%;
-    height: 500px;
+    height: 340px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 main .speakers .cards-container .card {
@@ -216,6 +217,22 @@ main .speakers .cards-container .card .description samp.js {
 main .speakers .cards-container .card .description samp.react {
     background: blue;
     color: #fff;
+}
+
+main .speakers .cards-container button{
+    height: 340px;
+    width: auto;
+    font-size: 3em;
+    cursor: pointer;
+    border: none;
+}
+
+main .speakers .cards-container button:first-of-type:hover{
+    background:linear-gradient(270deg, rgba(0,0,0,0.2), transparent);
+}
+
+main .speakers .cards-container button:last-of-type:hover{
+    background:linear-gradient(90deg, rgba(0,0,0,0.2), transparent);
 }
 
 @media (max-width: 600px) {
