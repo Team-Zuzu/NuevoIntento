@@ -1,5 +1,6 @@
 main {
     color: #fff;
+    background: #eee;
 }
 
 main a {
@@ -17,7 +18,7 @@ main .loby img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter: sepia(25%) opacity(60%);
+    filter: sepia(10%) brightness(0.65);
 }
 
 main .loby .zona-de-escritura {
@@ -149,6 +150,72 @@ main .loby .zona-de-escritura div a:last-child:hover span:nth-child(4) {
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.75s;
+}
+
+main .speakers {
+    text-align: center;
+    color: #000;
+}
+
+main .speakers .cards-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .speakers .cards-container .card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 340px;
+    height: 340px;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0px);
+    background: #333;
+    box-shadow: 0 0 50px #666;
+}
+
+main .speakers .cards-container .card img {
+    width: 340px;
+    height: 340px;
+    transition: 0.5s;
+}
+
+main .speakers .cards-container .card:hover img {
+    transform: translate3d(0, 0, 50px);
+}
+
+main .speakers .cards-container .card .description {
+    height: 220px;
+    width: 300px;
+    position: absolute;
+    transform: translate3d(0, 0, -10px);
+    background: #fff;
+    text-align: start;
+    transition: 1s;
+    padding: 1em;
+}
+
+main .speakers .cards-container .card:hover .description {
+    transform: translate3d(0, 220px, -10px);
+}
+
+main .speakers .cards-container .card .description samp {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main .speakers .cards-container .card .description samp.js {
+    background: yellow;
+}
+
+main .speakers .cards-container .card .description samp.react {
+    background: blue;
+    color: #fff;
 }
 
 @media (max-width: 600px) {

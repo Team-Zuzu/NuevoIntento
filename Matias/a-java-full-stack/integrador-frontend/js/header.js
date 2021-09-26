@@ -13,7 +13,7 @@ window.addEventListener('resize', () => {
         if (window.scrollY > 0 && !navbar.classList.contains('sticky')) {
             navbar.classList.add('sticky');
         }
-        if(toggle.classList.contains('active')){
+        if (toggle.classList.contains('active')) {
             Toggle()
         }
     }
@@ -26,3 +26,8 @@ const Toggle = () => {
     navbar.classList.toggle('active');
     toggle.classList.toggle('active');
 }
+
+VanillaTilt.init(document.querySelectorAll('.card'), {
+    max: 15,
+    speed: 1000,
+});
