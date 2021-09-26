@@ -6,6 +6,7 @@ header .navbar {
     align-items: center;
     padding: 40px 30px;
     z-index: 10000;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
     transition: 0.5s;
 }
 
@@ -139,7 +140,6 @@ header .navbar.sticky .links a:last-child:hover {
         transform: translateY(0px) rotate(-45deg);
     }
     header .navbar {
-        /* width: 60px; */
         width: 60px;
         height: 100vh;
         padding: 0;
@@ -148,7 +148,6 @@ header .navbar.sticky .links a:last-child:hover {
         flex-wrap: wrap;
         overflow: hidden;
         background: #333;
-        /* transition: 0.5s; */
     }
     header .navbar:hover, header .navbar.active {
         width: 300px
@@ -197,22 +196,10 @@ header .navbar.sticky .links a:last-child:hover {
         text-align: center;
     }
     header .logo span {
-        /* display: block;
-        height: 60px;
-        width: 300px;
-        margin: 0;
-        line-height: 60px;
-        font-size: 1.5em;
-        transform: translate(70px, 0px); */
         text-align: center;
         transform: translate(0px, 0px);
-        /* width: 100%; */
     }
     header .links a .fas {
-        /* display: inline-block; */
         width: min-content;
-        /* height: 60px; */
-        /* line-height: 60px; */
-        /* text-align: center; */
     }
 }

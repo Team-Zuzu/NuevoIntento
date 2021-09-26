@@ -1,20 +1,18 @@
-main{
+main {
     color: #fff;
 }
-main a{
+
+main a {
     text-decoration: none;
     color: #fff;
 }
-main .loby{
+
+main .loby {
     position: relative;
     height: 100vh;
-    /* background: url(../assets/images/ba1.jpg);
-    background-size: cover;
-    background-position: 50% 0%;
-    filter: sepia(25%) opacity(75%); */
 }
 
-main .loby img{
+main .loby img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -22,7 +20,7 @@ main .loby img{
     filter: sepia(25%) opacity(60%);
 }
 
-main .loby .zona-de-escritura{
+main .loby .zona-de-escritura {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -34,17 +32,134 @@ main .loby .zona-de-escritura{
     margin: 0 10vw 0 10vw;
 }
 
-main .loby .zona-de-escritura h1{
+main .loby .zona-de-escritura h1 {
     font-size: 2em;
     letter-spacing: 1px;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
+main .loby .zona-de-escritura p {
+    margin-bottom: 2em;
+}
 
-main .loby .zona-de-escritura div a{
+main .loby .zona-de-escritura div {
+    height: fit-content;
+}
+
+main .loby .zona-de-escritura div a {
     display: inline-block;
     padding: 10px 20px;
-    background: forestgreen;
     border-radius: 5px;
-    margin-left: 20px;
+    height: 45px;
+    overflow: hidden;
+}
+
+main .loby .zona-de-escritura div a:first-child {
+    margin-right: 40px;
+    border: 2px solid #fff;
+    backdrop-filter: blur(25px);
+    transition: 0.5s;
+}
+
+main .loby .zona-de-escritura div a:first-child:hover {
+    backdrop-filter: blur(10px);
+}
+
+main .loby .zona-de-escritura div a:last-child {
+    position: relative;
+    background: forestgreen;
+    /* Tiempo para que "encienda las luces" */
+    transition: 0.5s;
+}
+
+main .loby .zona-de-escritura div a:last-child:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.80), 0 0 80px forestgreen;
+    transition-delay: 1s;
+}
+
+main .loby .zona-de-escritura div a:last-child span {
+    position: absolute;
+    display: block;
+}
+
+/* En las siguientes líneas voy a explicar cómo funciona esta animación */
+
+main .loby .zona-de-escritura div a:last-child span:nth-child(1) {
+    /* Esta es la línea que vamos a dibujar (en este caso, la superior) */
+    top: 0;
+    /* Como es línea superior, su ancho debe ser del 100% */
+    left: -100%;
+    /* La línea va a tener un grosor de 2 pixeles */
+    width: 100%;
+    /* Como la línea va a viajar de izquierda a derecha, la acomodo a left:-100% */
+    height: 2px;
+    /* Los gradientes se dibujan con el primer color arriba y el segundo abajo. Con 90deg giro el gradiente 90º a la izquierda para que el primer color quede a la izquierda y el segundo a la derecha */
+    background: linear-gradient(90deg, transparent, lime);
+}
+
+main .loby .zona-de-escritura div a:last-child:hover span:nth-child(1) {
+    /* Activo al hover, el gradiente se mueve de left -100% a left 100% */
+    left: 100%;
+    /* Velocidad de "animación" */
+    transition: 1s;
+    /* Tiempo de espera */
+    transition-delay: 0s;
+}
+
+/* Lo mismo de recién se repite con las 4 líneas */
+
+main .loby .zona-de-escritura div a:last-child span:nth-child(2) {
+    right: 0;
+    top: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, lime);
+}
+
+main .loby .zona-de-escritura div a:last-child:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+main .loby .zona-de-escritura div a:last-child span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, lime);
+}
+
+main .loby .zona-de-escritura div a:last-child:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+main .loby .zona-de-escritura div a:last-child span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, lime);
+}
+
+main .loby .zona-de-escritura div a:last-child:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+@media (max-width: 600px) {
+    main .loby .zona-de-escritura {
+        text-align: center;
+    }
+    main .loby .zona-de-escritura div a {
+        margin: 0 20px 1em;
+    }
+    /* Por especificidad lo tuve que aclarar abajo */
+    main .loby .zona-de-escritura div a:first-child {
+        margin-right: 20px;
+    }
 }
