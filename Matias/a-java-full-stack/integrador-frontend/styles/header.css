@@ -86,7 +86,7 @@ header .navbar.sticky .links a:hover {
 }
 
 header .navbar.sticky .links a:last-child {
-    color: hsl(120, 100%, 30%)
+    color: #269b3f
 }
 
 header .navbar.sticky .links a:last-child:hover {

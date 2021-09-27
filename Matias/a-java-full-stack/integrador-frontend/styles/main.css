@@ -59,23 +59,26 @@ main .loby .zona-de-escritura div a {
 main .loby .zona-de-escritura div a:first-child {
     margin-right: 40px;
     border: 2px solid #fff;
-    backdrop-filter: blur(25px);
+    /* backdrop-filter no es soportado por Firefox */
+    /* backdrop-filter: blur(25px); */
+    background: rgba(0, 0, 0, 0.3);
     transition: 0.5s;
 }
 
 main .loby .zona-de-escritura div a:first-child:hover {
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 main .loby .zona-de-escritura div a:last-child {
     position: relative;
-    background: forestgreen;
+    background: #29a744;
     /* Tiempo para que "encienda las luces" */
     transition: 0.5s;
 }
 
 main .loby .zona-de-escritura div a:last-child:hover {
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.80), 0 0 80px forestgreen;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.50), 0 0 80px #29a744;
     transition-delay: 1s;
 }
 
@@ -155,16 +158,17 @@ main .loby .zona-de-escritura div a:last-child:hover span:nth-child(4) {
 main .speakers {
     text-align: center;
     color: #000;
+    height: 500px;
 }
 
-main .speakers span{
+main .speakers span {
     display: inline-block;
     margin-top: 20px;
     text-transform: uppercase;
     font-size: 0.8em;
 }
 
-main .speakers h2{
+main .speakers h2 {
     margin: 0 0 1em;
     text-transform: uppercase;
 }
@@ -186,8 +190,8 @@ main .speakers .cards-container .card {
     width: 340px;
     height: 340px;
     transform-style: preserve-3d;
-    background: #333;
-    box-shadow: 0 0 50px #666;
+    background: linear-gradient(#333, #111);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 main .speakers .cards-container .card img {
@@ -207,7 +211,7 @@ main .speakers .cards-container .card:hover img.checked {
 }
 
 main .speakers .cards-container .card .description {
-    height: 220px;
+    height: 180px;
     width: 300px;
     display: none;
     position: absolute;
@@ -216,6 +220,7 @@ main .speakers .cards-container .card .description {
     text-align: start;
     transition: 1s;
     padding: 1em;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 main .speakers .cards-container .card .description.checked {
@@ -223,7 +228,7 @@ main .speakers .cards-container .card .description.checked {
 }
 
 main .speakers .cards-container .card:hover .description.checked {
-    transform: translate3d(0, 220px, -10px);
+    transform: translate3d(0, 180px, -10px);
 }
 
 main .speakers .cards-container .card .description samp {
@@ -258,7 +263,7 @@ main .speakers .cards-container .card .description h3 {
     margin: 10px 0;
 }
 
-main .speakers .cards-container .card .description p{
+main .speakers .cards-container .card .description p {
     margin: 0;
     font-size: 0.8em;
 }
@@ -277,6 +282,18 @@ main .speakers .cards-container button:first-of-type:hover {
 
 main .speakers .cards-container button:last-of-type:hover {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
+}
+
+main .place{
+    width: 100%;
+    height: 400px;
+    background: #333;
+}
+
+main .be-speaker{
+    width: 100%;
+    height: 400px;
+    background: #ddd;
 }
 
 @media (max-width: 600px) {
