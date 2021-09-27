@@ -174,7 +174,6 @@ main .speakers .cards-container .card {
     width: 340px;
     height: 340px;
     transform-style: preserve-3d;
-    transform: translate3d(0, 0, 0px);
     background: #333;
     box-shadow: 0 0 50px #666;
 }
@@ -182,16 +181,23 @@ main .speakers .cards-container .card {
 main .speakers .cards-container .card img {
     width: 340px;
     height: 340px;
+    display: none;
+    position: absolute;
     transition: 0.5s;
 }
 
-main .speakers .cards-container .card:hover img {
+main .speakers .cards-container .card img.checked{
+    display: block;
+}
+
+main .speakers .cards-container .card:hover img.checked {
     transform: translate3d(0, 0, 50px);
 }
 
 main .speakers .cards-container .card .description {
     height: 220px;
     width: 300px;
+    display: none;
     position: absolute;
     transform: translate3d(0, 0, -10px);
     background: #fff;
@@ -200,7 +206,11 @@ main .speakers .cards-container .card .description {
     padding: 1em;
 }
 
-main .speakers .cards-container .card:hover .description {
+main .speakers .cards-container .card .description.checked{
+    display: block;
+}
+
+main .speakers .cards-container .card:hover .description.checked {
     transform: translate3d(0, 220px, -10px);
 }
 
@@ -234,6 +244,8 @@ main .speakers .cards-container button:first-of-type:hover{
 main .speakers .cards-container button:last-of-type:hover{
     background:linear-gradient(90deg, rgba(0,0,0,0.2), transparent);
 }
+
+
 
 @media (max-width: 600px) {
     main .loby .zona-de-escritura {
