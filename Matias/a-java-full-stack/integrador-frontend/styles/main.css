@@ -157,6 +157,18 @@ main .speakers {
     color: #000;
 }
 
+main .speakers span{
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+main .speakers h2{
+    margin: 0 0 1em;
+    text-transform: uppercase;
+}
+
 main .speakers .cards-container {
     width: 100%;
     height: 340px;
@@ -186,7 +198,7 @@ main .speakers .cards-container .card img {
     transition: 0.5s;
 }
 
-main .speakers .cards-container .card img.checked{
+main .speakers .cards-container .card img.checked {
     display: block;
 }
 
@@ -206,7 +218,7 @@ main .speakers .cards-container .card .description {
     padding: 1em;
 }
 
-main .speakers .cards-container .card .description.checked{
+main .speakers .cards-container .card .description.checked {
     display: block;
 }
 
@@ -218,6 +230,9 @@ main .speakers .cards-container .card .description samp {
     display: inline-block;
     border-radius: 5px;
     padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
 }
 
 main .speakers .cards-container .card .description samp.js {
@@ -229,7 +244,26 @@ main .speakers .cards-container .card .description samp.react {
     color: #fff;
 }
 
-main .speakers .cards-container button{
+main .speakers .cards-container .card .description samp.business {
+    background: #333;
+    color: #fff;
+}
+
+main .speakers .cards-container .card .description samp.startup {
+    background: red;
+    color: #fff;
+}
+
+main .speakers .cards-container .card .description h3 {
+    margin: 10px 0;
+}
+
+main .speakers .cards-container .card .description p{
+    margin: 0;
+    font-size: 0.8em;
+}
+
+main .speakers .cards-container button {
     height: 340px;
     width: auto;
     font-size: 3em;
@@ -237,15 +271,13 @@ main .speakers .cards-container button{
     border: none;
 }
 
-main .speakers .cards-container button:first-of-type:hover{
-    background:linear-gradient(270deg, rgba(0,0,0,0.2), transparent);
+main .speakers .cards-container button:first-of-type:hover {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
-main .speakers .cards-container button:last-of-type:hover{
-    background:linear-gradient(90deg, rgba(0,0,0,0.2), transparent);
+main .speakers .cards-container button:last-of-type:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
 }
-
-
 
 @media (max-width: 600px) {
     main .loby .zona-de-escritura {
