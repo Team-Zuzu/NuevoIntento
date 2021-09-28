@@ -290,15 +290,8 @@ main .place {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
     width: 100%;
     height: 650px;
-    /* background: #333; */
-    /* background: url(../assets/images/buenos-aires-i.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    backdrop-filter: brightness(60%); */
 }
 
 main .place .zona-de-escritura {
@@ -308,7 +301,6 @@ main .place .zona-de-escritura {
     margin: 0 12vw;
     z-index: 10;
     text-align: center;
-    /* transform:translateY(-10px); */
 }
 
 main .place .zona-de-escritura h2 {
@@ -351,13 +343,13 @@ main .place img:last-of-type {
 
 main .be-speaker {
     width: 100%;
-    height: 800px;
+    height: max-content;
+    margin-bottom: 50px;
     color: #000;
     text-align: center;
 }
 
 main .be-speaker .zona-de-escritura{
-    /* border: 1px solid red; */
     margin: 0px 15vw;
 } 
 
@@ -385,13 +377,11 @@ main .be-speaker .zona-de-escritura form {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    /* border: 1px solid blue; */
 }
 
 main .be-speaker .zona-de-escritura form .input-container {
     position: relative;
     width: min-content;
-    /* border: 5px solid violet; */
     margin: 20px 20px;
 }
 
@@ -435,13 +425,13 @@ main .be-speaker .zona-de-escritura form .input-container textarea {
     border-bottom: 2px solid #999;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
-    /* background: green; */
 }
 
 main .be-speaker .zona-de-escritura form .input-container p{
     position: absolute;
     bottom: -2.1em;
     left: 5px;
+    color: #222;
 }
 
 main .be-speaker .zona-de-escritura form input[type="submit"]{
@@ -455,9 +445,8 @@ main .be-speaker .zona-de-escritura form input[type="submit"]{
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-weight: 600;
+    margin-top: 30px;
 }
-
-
 
 @media (max-width: 600px) {
     main .loby .zona-de-escritura {

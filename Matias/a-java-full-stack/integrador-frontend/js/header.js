@@ -4,11 +4,14 @@ let imgs = document.querySelectorAll('.img-speaker');
 let descriptions = document.querySelectorAll('.description');
 
 window.addEventListener('scroll', () => {
+    CheckScroll()
+})
 
+const CheckScroll = () => {
     if (window.innerWidth > 1200) {
         navbar.classList.toggle('sticky', window.scrollY > 0);
     }
-})
+}
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1200) {
@@ -90,3 +93,5 @@ const PreviousImg = () => {
         descriptions[i].classList.add('checked')
     }
 }
+
+CheckScroll()
