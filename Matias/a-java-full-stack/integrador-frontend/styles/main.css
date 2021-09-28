@@ -1,6 +1,6 @@
 main {
     color: #fff;
-    background: #eee;
+    /* background: #eee; */
 }
 
 main a {
@@ -274,6 +274,7 @@ main .speakers .cards-container button {
     font-size: 3em;
     cursor: pointer;
     border: none;
+    background: transparent;
 }
 
 main .speakers .cards-container button:first-of-type:hover {
