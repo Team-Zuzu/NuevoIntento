@@ -356,23 +356,48 @@ main .be-speaker {
     text-align: center;
 }
 
+main .be-speaker .zona-de-escritura{
+    /* border: 1px solid red; */
+    margin: 0px 15vw;
+} 
+
+main .be-speaker .zona-de-escritura>span {
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+main .be-speaker .zona-de-escritura h2 {
+    margin: 0 0 1em;
+    text-transform: uppercase;
+}
+
 main .be-speaker .zona-de-escritura p span {
     border-bottom: 2px dotted #111;
 }
 
 main .be-speaker .zona-de-escritura form {
     display: flex;
-    width: 750px;
+    width: 100%;
+    max-width: 800px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+    /* border: 1px solid blue; */
 }
 
 main .be-speaker .zona-de-escritura form .input-container {
     position: relative;
     width: min-content;
+    /* border: 5px solid violet; */
     margin: 20px 20px;
+}
+
+main .be-speaker .zona-de-escritura form .input-container:last-of-type {
+    width: 100%;
+    max-width: 650px;
 }
 
 main .be-speaker .zona-de-escritura form .input-container input {
@@ -403,13 +428,14 @@ main .be-speaker .zona-de-escritura form .input-container span {
 }
 
 main .be-speaker .zona-de-escritura form .input-container textarea {
-    width: 650px;
+    width: 100%;
     height: 100px;
     outline: none;
     border: none;
     border-bottom: 2px solid #999;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
+    /* background: green; */
 }
 
 main .be-speaker .zona-de-escritura form .input-container p{
