@@ -434,8 +434,8 @@
 //     }
 //     else return 'Querés dividir por cero o estás ingresando texto?? xD'
 // }
-// let num = 320
-// const divisores = [2, 3, 5, 7]
+// let num = 420
+// const divisores = [2, 3, 5, 7, 210]
 // console.log(DesafioMati(num, divisores))
 
 // 30. Buscar números primos de forma epica
@@ -475,4 +475,50 @@
 // }
 // if(esPrimo){
 //     console.log('Es primo');
+// }
+
+// 32. Crear un programa que pueda definir la estación del año de acuerdo a un día y un mes dados.
+// let dia = 21;
+// let mes = 9;
+// let cadena = `El día ${dia} del ${mes} es `
+// const Asignacion = (num) => {
+//     if (num < 0) {
+//         if (mes < 3) cadena += 'verano'
+//         else if (mes < 6) cadena += 'otoño'
+//         else if (mes < 9) cadena += 'invierno'
+//         else if (mes < 12) cadena += 'primavera'
+//     }
+//     else {
+//         if (mes < 3) cadena += 'primavera'
+//         else if (mes < 6) cadena += 'verano'
+//         else if (mes < 9) cadena += 'otoño'
+//         else if (mes < 12) cadena += 'invierno'
+//     }
+// }
+
+// if (mes % 3 == 0) 
+//     if (dia < 21) Asignacion(1)
+//     else Asignacion(-1)
+// else Asignacion(1)
+// document.write(cadena);
+
+// OTRA FORMA
+
+// let dia = 21;
+// let mes = 9;
+// fecha = mes + dia / 100;
+// if (fecha < 3.21) document.write("verano");
+// else if (fecha < 6.21) document.write("otoño");
+// else if (fecha < 9.21) document.write("invierno");
+// else if (fecha < 12.21) document.write("primavera");
+// else document.write("verano");
+
+// 33. Escribir la tabla del 2. Por ejemplo. 
+// 2 x 1 = 2 
+// 2 x 2 = 4
+// 2 x 3 = 6
+
+// for (let i = 1; i <= 10; i++) {
+//     let cadena = '2 x ' + i + ' = ' + (i * 2) + '<br>'
+//     document.write(cadena)
 // }

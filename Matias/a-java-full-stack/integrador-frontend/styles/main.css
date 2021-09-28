@@ -394,11 +394,11 @@ main .be-speaker .zona-de-escritura form .input-container:last-of-type {
 main .be-speaker .zona-de-escritura form .input-container input {
     width: 300px;
     height: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
     border: none;
     outline: none;
     border-bottom: 2px solid #999;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
 }
 
 main .be-speaker .zona-de-escritura form .input-container input:focus+span, 
@@ -420,7 +420,8 @@ main .be-speaker .zona-de-escritura form .input-container span {
 
 main .be-speaker .zona-de-escritura form .input-container textarea {
     width: 100%;
-    height: 100px;
+    /* min-width: 300px; */
+    height: 150px;
     outline: none;
     border: none;
     border-bottom: 2px solid #999;
@@ -439,14 +440,15 @@ main .be-speaker .zona-de-escritura form input[type="submit"]{
     display: block;
     border: none;
     background: #29a744;
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     height: 60px;
     color: #fff;
     font-size: 1.2em;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-weight: 600;
-    margin-top: 30px;
+    margin: 30px 20px 0;
 }
 
 @media (max-width: 600px) {
@@ -459,5 +461,17 @@ main .be-speaker .zona-de-escritura form input[type="submit"]{
     /* Por especificidad lo tuve que aclarar abajo */
     main .loby .zona-de-escritura div a:first-child {
         margin-right: 20px;
+    }
+    main .be-speaker .zona-de-escritura {
+        margin: 0;
+    }
+    main .place .zona-de-escritura {
+        margin: 0 6vw;
+    }
+
+}
+@media (max-width: 450px) {
+    main .place .zona-de-escritura {
+        transform: translateY(calc(-250px + 55vw));
     }
 }
