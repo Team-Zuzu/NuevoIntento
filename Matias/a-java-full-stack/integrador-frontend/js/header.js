@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
     CheckScroll()
 })
 
-const CheckScroll = () => {
+function CheckScroll() {
     if (window.innerWidth > 1200) {
         navbar.classList.toggle('sticky', window.scrollY > 0);
     }
@@ -27,7 +27,7 @@ window.addEventListener('resize', () => {
     }
 })
 
-const Toggle = () => {
+function Toggle() {
     navbar.classList.toggle('active');
     toggle.classList.toggle('active');
 }
@@ -37,7 +37,7 @@ VanillaTilt.init(document.querySelectorAll('.card'), {
     speed: 1000,
 });
 
-const SearchChecked = () => {
+function SearchChecked() {
     let found = false
     let i = 0
     while (!found && i < imgs.length) {
@@ -58,7 +58,7 @@ const SearchChecked = () => {
     }
 }
 
-const NextImg = () => {
+function NextImg() {
     let i = SearchChecked()
     if (i >= 0) {
         imgs[i].classList.remove('checked')
@@ -76,7 +76,7 @@ const NextImg = () => {
     }
 }
 
-const PreviousImg = () => {
+function PreviousImg() {
     let i = SearchChecked()
     if (i >= 0) {
         imgs[i].classList.remove('checked')

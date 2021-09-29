@@ -158,7 +158,21 @@ main .loby .zona-de-escritura div a:last-child:hover span:nth-child(4) {
 main .speakers {
     text-align: center;
     color: #000;
-    height: 660px;
+    height: 680px;
+    width: 100%;
+    background: url(../assets/images/line-dotted.png);
+    background-repeat: no-repeat;
+    background-position: center 88%;
+    background-size: auto;
+}
+
+main .speakers span:nth-child(3){
+    position: relative;
+    top: 450px;
+    right: 75px;
+    font-size: 1em;
+    font-weight: 600px;
+    text-transform: capitalize;
 }
 
 main .speakers span {
@@ -169,7 +183,7 @@ main .speakers span {
 }
 
 main .speakers h2 {
-    margin: 0 0 1em;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -192,16 +206,40 @@ main .speakers .cards-container .card {
     transform-style: preserve-3d;
     background: linear-gradient(#333, #111);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+main .speakers .cards-container .card:hover {
+    background: linear-gradient(#333, #222);
+}
+
+main .speakers .cards-container .card img:first-of-type {
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 80%;
+    top: -20px;
+    margin: 0 12vw;
+    object-fit: contain;
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0px);
+}
+
+main .speakers .cards-container .card:hover img:first-of-type {
+    top: -60px;
+    opacity: 1;
+    transform: translate3d(0px, 0, 50px);
 }
 
 main .speakers .cards-container .card img {
-    width: 340px;
+    width: 80%;
+    height: 80%;
     max-width: 100%;
     object-fit: cover;
-    height: 340px;
     display: none;
     position: absolute;
     transition: 0.5s;
+    border-radius: 20px;
 }
 
 main .speakers .cards-container .card img.checked {
@@ -209,7 +247,7 @@ main .speakers .cards-container .card img.checked {
 }
 
 main .speakers .cards-container .card:hover img.checked {
-    transform: translate3d(0, 0, 50px);
+    transform: translate3d(0, 0, 100px);
 }
 
 main .speakers .cards-container .card .description {
@@ -218,7 +256,7 @@ main .speakers .cards-container .card .description {
     max-width: 90%;
     display: none;
     position: absolute;
-    transform: translate3d(0, 0, -10px);
+    transform: translate3d(0, 0, -1px);
     background: #fff;
     text-align: start;
     transition: 1s;
@@ -272,8 +310,8 @@ main .speakers .cards-container .card .description p {
 }
 
 main .speakers .cards-container button {
-    height: 340px;
-    width: auto;
+    height: 335px;
+    width: 50px;
     font-size: 3em;
     cursor: pointer;
     border: none;
@@ -353,9 +391,9 @@ main .be-speaker {
     text-align: center;
 }
 
-main .be-speaker .zona-de-escritura{
+main .be-speaker .zona-de-escritura {
     margin: 0px 15vw;
-} 
+}
 
 main .be-speaker .zona-de-escritura>span {
     display: inline-block;
@@ -404,10 +442,7 @@ main .be-speaker .zona-de-escritura form .input-container input {
     border-bottom: 2px solid #999;
 }
 
-main .be-speaker .zona-de-escritura form .input-container input:focus+span, 
-main .be-speaker .zona-de-escritura form .input-container textarea:focus+span,
-main .be-speaker .zona-de-escritura form .input-container input:valid+span, 
-main .be-speaker .zona-de-escritura form .input-container textarea:valid+span {
+main .be-speaker .zona-de-escritura form .input-container input:focus+span, main .be-speaker .zona-de-escritura form .input-container textarea:focus+span, main .be-speaker .zona-de-escritura form .input-container input:valid+span, main .be-speaker .zona-de-escritura form .input-container textarea:valid+span {
     top: -1.5em;
     font-size: 0.8em;
 }
@@ -432,14 +467,14 @@ main .be-speaker .zona-de-escritura form .input-container textarea {
     font-size: 1em;
 }
 
-main .be-speaker .zona-de-escritura form .input-container p{
+main .be-speaker .zona-de-escritura form .input-container p {
     position: absolute;
     bottom: -2.1em;
     left: 5px;
     color: #222;
 }
 
-main .be-speaker .zona-de-escritura form input[type="submit"]{
+main .be-speaker .zona-de-escritura form input[type="submit"] {
     display: block;
     border: none;
     background: #29a744;
@@ -472,15 +507,25 @@ main .be-speaker .zona-de-escritura form input[type="submit"]{
         margin: 0;
     }
 }
+
 @media (max-width: 450px) {
+    main .speakers .cards-container button[type="button"]:hover {
+        background: transparent;
+    }
     main .speakers .cards-container .card {
         margin: 0 10px;
+    }
+    main .speakers .cards-container .card:hover img.checked {
+        transform: translate3d(0, 0, 50px);
+    }
+    main .speakers .cards-container .card:hover img:first-of-type {
+        top: -50px;
+        transform: translate3d(0px, 0, 25px);
     }
     main .place .zona-de-escritura {
         transform: translateY(calc(-250px + 55vw));
     }
     main .place .zona-de-escritura a {
-
         background: rgba(0, 0, 0, 0.5);
     }
     main .place .zona-de-escritura a:hover {
