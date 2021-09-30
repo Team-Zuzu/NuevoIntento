@@ -30,13 +30,16 @@ window.addEventListener('resize', () => {
 function Toggle() {
     navbar.classList.toggle('active');
     toggle.classList.toggle('active');
+    if(navbar.classList.contains('close'))
+        navbar.classList.remove('close')
 }
 
 //La idea de este método es que el navbar se cierre al hacerle click a alguno de sus enlaces peeeero, por el hover no se cierra y queda bugueado :/ Como no tengo tiempo para resolver este bug elegí eliminar esta funcion.
-// function ToggleClose() {
-//     navbar.classList.remove('active');
-//     toggle.classList.remove('active');
-// }
+function ToggleClose() {
+    navbar.classList.remove('active');
+    toggle.classList.remove('active');
+    navbar.classList.add('close');
+}
 
 VanillaTilt.init(document.querySelectorAll('.card'), {
     max: 15,

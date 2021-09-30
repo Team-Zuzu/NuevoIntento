@@ -196,6 +196,9 @@ header .navbar.sticky .links a:last-child:hover {
     header .navbar.active {
         width: 100%;
     }
+    header .navbar.close{
+        width: 0px;
+    }
     header .links a {
         display: block;
         min-width: 100%;

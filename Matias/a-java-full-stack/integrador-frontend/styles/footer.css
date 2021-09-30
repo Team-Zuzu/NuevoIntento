@@ -25,6 +25,9 @@ footer nav a {
     color: #fff;
     text-decoration: none;
 }
+footer nav a:hover{
+    text-shadow: 0 0 10px white;
+}
 
 @media (max-width: 600px) {
     footer {
