@@ -171,7 +171,9 @@ main .speakers span:nth-child(3){
     top: 450px;
     right: 75px;
     font-size: 1em;
-    font-weight: 600px;
+    font-weight: 700;
+    user-select: none;
+    color: #333;
     text-transform: capitalize;
 }
 
