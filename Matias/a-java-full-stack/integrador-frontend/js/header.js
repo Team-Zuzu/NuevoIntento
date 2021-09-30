@@ -32,6 +32,11 @@ function Toggle() {
     toggle.classList.toggle('active');
 }
 
+function ToggleClose() {
+    navbar.classList.remove('active');
+    toggle.classList.remove('active');
+}
+
 VanillaTilt.init(document.querySelectorAll('.card'), {
     max: 15,
     speed: 1000,

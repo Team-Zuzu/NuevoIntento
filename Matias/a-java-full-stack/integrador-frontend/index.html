@@ -42,11 +42,11 @@
             </div>
 
             <div class="links">
-                <a href="#"><i class="fas fa-building"></i>Conferencia</a>
-                <a href="#"><i class="fas fa-users"></i>Oradores</a>
-                <a href="#"><i class="fas fa-address-book"></i>Lugar y fecha</a>
-                <a href="#"><i class="fas fa-user-plus"></i>Conviértete en orador</a>
-                <a href="#"><i class="fas fa-credit-card"></i>Comprar tickets</a>
+                <a href="#loby" onclick="ToggleClose()"><i class="fas fa-building"></i>Conferencia</a>
+                <a href="#speakers" onclick="ToggleClose()"><i class="fas fa-users"></i>Oradores</a>
+                <a href="#place" onclick="ToggleClose()"><i class="fas fa-address-book"></i>Lugar y fecha</a>
+                <a href="#be-speaker" onclick="ToggleClose()"><i class="fas fa-user-plus"></i>Conviértete en orador</a>
+                <a href="#" onclick="ToggleClose()"><i class="fas fa-credit-card"></i>Comprar tickets</a>
             </div>
 
         </nav>
@@ -56,9 +56,13 @@
     </header>
 
     <main>
-        <section class="loby">
-            <img srcset="./assets/images/ba720.jpg,
-            ./assets/images/ba360.jpg 2x" alt="El Palacio de Aguas Corrientes de la ciudad de Buenos Aires">
+        <section class="loby" id="loby">
+            <!-- <img srcset="./assets/images/ba720.jpg,
+            ./assets/images/ba360.jpg 2x" alt="El Palacio de Aguas Corrientes de la ciudad de Buenos Aires"> -->
+            <picture>
+                <source media="(min-width: 1200px)" srcset="./assets/images/ba720.jpg">
+                <img srcset="./assets/images/ba480.jpg" alt="El Palacio de Aguas Corrientes de Bs As">
+            </picture>
             <div class="zona-de-escritura">
                 <h1>Conf Bs As</h1>
                 <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el
@@ -71,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="speakers">
+        <section class="speakers" id="speakers">
             <span>Conoce a los</span>
             <h2>Oradores</h2>
             <span>Click me!</span>
@@ -113,7 +117,7 @@
 
         </section>
 
-        <section class="place">
+        <section class="place" id="place">
             <div class="zona-de-escritura">
                 <h2>Bs As - Octubre</h2>
                 <p>Ciudad de Buenos Aires es la capital y ciudad más poblada de la República Argentina. Esta metrópolis
@@ -122,14 +126,25 @@
                     sobre la orilla sur del Río de la Plata, en la región pampeana.</p>
                 <a href="#">Conocé más</a>
             </div>
+
+            <!-- <picture>
+                <source media="(min-width: 1200)" srcset="./assets/images/buenos-aires720.jpg">
+                <img src="./assets/images/buenos-aires480.jpg" alt="Buenos Aires">
+            </picture>
+            <picture>
+                <source media="(min-width: 1200)" srcset="./assets/images/mask720.jpg">
+                <img src="./assets/images/mask480.jpg" alt="Máscara">
+            </picture> -->
+
             <img srcset="
             ./assets/images/buenos-aires720.jpg, 
-            ./assets/images/buenos-aires360.jpg 2x" alt="Buenos Aires">
+            ./assets/images/buenos-aires480.jpg 2x" alt="Buenos Aires">
             <img srcset="./assets/images/mask720.jpg,
-            ./assets/images/mask360.jpg 2x" alt="Máscara">
+            ./assets/images/mask480.jpg 2x" alt="Máscara">
+
         </section>
 
-        <section class="be-speaker">
+        <section class="be-speaker" id="be-speaker">
             <div class="zona-de-escritura">
                 <span>Conviértete en un</span>
                 <h2>Orador</h2>
