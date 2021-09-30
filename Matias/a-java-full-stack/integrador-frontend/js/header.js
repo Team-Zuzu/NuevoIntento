@@ -32,10 +32,11 @@ function Toggle() {
     toggle.classList.toggle('active');
 }
 
-function ToggleClose() {
-    navbar.classList.remove('active');
-    toggle.classList.remove('active');
-}
+//La idea de este método es que el navbar se cierre al hacerle click a alguno de sus enlaces peeeero, por el hover no se cierra y queda bugueado :/ Como no tengo tiempo para resolver este bug elegí eliminar esta funcion.
+// function ToggleClose() {
+//     navbar.classList.remove('active');
+//     toggle.classList.remove('active');
+// }
 
 VanillaTilt.init(document.querySelectorAll('.card'), {
     max: 15,
