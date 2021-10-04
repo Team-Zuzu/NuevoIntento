@@ -1,0 +1,20 @@
+a,
+button,
+input,
+.box {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.enter {
+    background-color: burlywood;
+}
+
+.leave {
+    background-color: brown;
+}

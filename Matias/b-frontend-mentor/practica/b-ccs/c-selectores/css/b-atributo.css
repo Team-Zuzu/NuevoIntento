@@ -1,0 +1,12 @@
+/* SELECTORES DE ATRIBUTO */
+
+/* ID */
+#title{
+    background-color: lightgreen;
+}
+
+/* CLASE */
+
+.text{
+    background-color: lightsalmon;
+}

@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    background: mediumorchid;
+}
+body{
+    margin: 0%;
+    background: color #333;;
+}
+.container{
+    color: aquamarine;
+    background-color: currentColor;
+    /* background-color: inherit; */
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: wheat;
+}

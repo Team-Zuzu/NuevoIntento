@@ -1,0 +1,17 @@
+body{
+    background-color: #333;
+    color: lightcoral;
+}
+.title{
+    font-size: 3rem;
+}
+.link{
+    background-color: lightcoral;
+    color: lightcyan;
+    padding: 1em 2em;
+    border-radius: .5em;
+    font-size: 2rem;
+}
+
+/* Si la medida que establecemos tiene que crecer proporcionalmente al tamaño del texto (como en este ejemplo) debemos utilizar siempre em.
+Si la medida tiene que ser siempre la misma y relativa al tamaño de fuente de la raiz tenemos que utilizar rem. */

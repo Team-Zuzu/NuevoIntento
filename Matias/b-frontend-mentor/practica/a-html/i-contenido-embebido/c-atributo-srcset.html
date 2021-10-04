@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo srcset</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<!-- 
+    srcset -> Es un set de imágenes que se cargarán según ciertas condiciones como la resolución del dispositivo. 
+
+    En este HTML vamos a decirle al navegador que cargue una imagen u otra en función al device pixel ratio.
+    Para que el navegador cargue las versiones para celular de las imágenes, al terminár de escribir la ruta de la imágen, le tenemos que aclarar el device pixel ratio al cual está destinada. Dicha aclaración se hace añadiendo 2x o 3x, dependiendo de la resolución del celular. 
+
+    ACLARACIONES:
+        En srcset nos conviene poner las imágenes webp y jpg por si el navegador no soporta las imágenes webp
+        Nos conviene conservar el src por si el navegador es antiguo y no soporta srcset
+ -->
+<body>
+    <h1>Contenido embebido</h1>
+    <img srcset="
+    /i-contenido-embebido/assets/images/Pokemon.webp, 
+    /i-contenido-embebido/assets/images/Pokemon.jpg, 
+    /i-contenido-embebido/assets/images/Pokemon-para-celulares.webp 2x,
+    /i-contenido-embebido/assets/images/Pokemon-para-celulares.jpg 2x" 
+    src="/i-contenido-embebido/assets/images/Pokemon.jpg" 
+    alt="Un Pikachu lindo diciendo tu eres preciosa">
+</body>
+</html>

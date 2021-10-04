@@ -1,0 +1,8 @@
+La propiedad display nos sirve para cambiar el contexto de los elementos dentro del navegador.
+Admite varios valores: 
+    none -> Hace que el elemento no se muetre, pero sigue cargándose.
+    block -> Hace que el elemento sea de bloque.
+    inline -> Hace que el elemento sea de línea. 
+    inlink-block -> Hace que el elemento sea de línea pero admite medidas y márgenes verticales.  
+
+Notas adicionales: Entonces, ¿en qué momento usar display: inline-block? Cuando tenemos un elemento que sea de linea y necesitamos que sea de linea si o si, en esos casos podemos usar inline-block si necesitamos darle medidas o margenes verticales o incluso ambas cosas. No es una propiedad que se utilice muy a menudo pero hay situaciones donde puede ayudar. 

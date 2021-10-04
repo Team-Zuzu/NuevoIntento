@@ -1,0 +1,20 @@
+.title{
+    color: blue;
+    font-size: 10px;
+}
+
+.text{
+    color: green;
+}
+
+.link{
+    color: inherit;
+}
+
+.list{
+    color: red;
+}
+
+.item-list{
+    color: initial;
+}

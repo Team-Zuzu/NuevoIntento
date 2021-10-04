@@ -1,0 +1,31 @@
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0%;
+    /* margin 0 en body es recomendable por el header */
+}
+
+header{
+    background-color: #999;
+    height: 50px;
+}
+
+.box{
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    /* para que le margen automático funcione, el elemento de bloque tiene que tener un ancho declarado 
+    al declarar el margin-left y el margen-right en auto, lo que conseguimos es que el bloque se centre.*/
+
+    /* margin: 100px 50px 10px 200px; */
+    /* 100 top, 50 right, 10 bot, 200 left */
+}
+
+.line{
+    background-color: lightcyan;
+    margin-right: 50px;
+    margin-left: 50px;
+    /* los elementos de línea tienen margenes horizontales pero no verticales */
+}

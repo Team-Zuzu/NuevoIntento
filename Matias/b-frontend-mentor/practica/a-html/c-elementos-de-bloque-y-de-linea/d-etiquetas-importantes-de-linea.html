@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas importantes de línea</title>
+
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<!-- 
+    span -> Es un contenedor de linea, equivalente a div, se suele usar para encerrar palabras o pequeños textos y darles estilo a través de CCS o localizarlos desde javascript. Semanticamente no significa nada
+
+    q -> Es el equivalente a blockquote, significa quote (por eso el de bloque se llama block - quote). Sirve para poner citas pero en línea. También admite el atributo cite
+
+    code -> Sirve para encerrar código que queremos representar visuamente, suele ir unido con la etiqueta pre. 
+
+    Entidades especiales en HTML - Código ASCII
+        https://ascii.cl/es/codigos-html.htm
+ -->
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Aut sint aliquam ut porro in?</span> Esse, temporibus beatae doloremque deserunt natus perferendis cupiditate nihil accusantium ut dolor dolores, est commodi qui!</p>
+
+    <q cite="https://na.leagueoflegends.com/es-es/">Yo soy Aurelion Sol</q>
+
+    <pre>
+        <code>
+            span{
+                color: red;
+            }
+        </code>
+    </pre>
+
+    <!-- En este ejemplo se usa el NUMERO HTML -->
+    <p>La etiqueta <code>&#60;h1&#62;</code> se utiliza para representar títulos de primer nivel.</p>
+    
+    <!-- En este ejemplo se usa el NOMBRE HTML -->
+    <p>La etiqueta <code>&lt;h2&gt;</code> significa "parrafo"</p>
+
+    <!-- Si escribimos & y presinamos Ctrl + Space se despliega una lista con todos los simbolos que podemos escribir. -->
+    <p>Evil Corporation Enterprise &copy;</p>
+</body>
+</html>

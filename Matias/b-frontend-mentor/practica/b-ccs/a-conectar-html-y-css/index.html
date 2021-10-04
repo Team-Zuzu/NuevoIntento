@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Conectar HTML y CCS</title>
+    <style>
+        /* body{
+            background-color: steelblue;
+        } */
+        /* @import url(/a-conectar-html-y-css/css/styles.css); */
+    </style>
+</head>
+<!-- 
+    BUENAS PRÁCTICAS:
+        Debemos crear un archivo css y hacer el link para mantener un estilo concreto entre las distintas páginas. 
+        Usar la etiqueta <style> solo sirve para aspectos concretos de una determinada página.
+
+    MALAS PRÁCTICAS:    
+        Dar estilos como atributos dentro de etiquetas ES UNA MUY MALA PRÁCTICA
+        @import url() -> Otra forma de linkear un CSS a un HTML pero genera ciertos problemas ya que la carga del CSS no se sincroniza con la del HTML.
+
+    <link> -> etiqueta necesaria para linkear CSS y HTML
+    rel -> atributo que establece la relación entre los documentos linkeados.
+ -->
+<body>
+    <h1 style="background-color: springgreen;">Conectar HTML y CCS</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam eum nobis autem obcaecati error voluptates dignissimos suscipit sapiente laborum, porro debitis iure. Necessitatibus aspernatur ut explicabo? Nesciunt aperiam neque mollitia.</p>
+</body>
+</html>

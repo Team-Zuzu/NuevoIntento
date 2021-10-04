@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    background-color: #333;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: #000 1px solid;
+}
+.container{
+    width: 200px;
+    height: 200px;
+    /* background-color: lightyellow; */
+    position: absolute;
+}
+.box1{
+    background-color: lightblue;
+    position: absolute;
+    left: 75px;
+    bottom: 75px;
+}
+.box2{
+    background-color: lightgreen;
+    position: absolute;
+    left: 75px;
+    bottom: 75px;
+}
+.link{
+    position: absolute;
+    color: lightskyblue;
+    background-color: #777;
+    width: 200px;
+    top: 50px;
+}
+.link2{
+    color: lightskyblue;
+    background-color: #777;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form action="./show_data.html">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre aquí" required>
+        <br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+        <br>
+
+        Dirección:
+        <br>
+        <label for="calle">Calle</label>
+        <input type="text" name="calle" id="calle">
+        <label for="altura">Altura</label>
+        <input type="number" name="altura" id="altura">
+        <br>
+
+        <label for="ciudad">Ciudad</label>
+        <input type="text" name="ciudad" value="Mar Del Plata">
+
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha">
+        <br>
+
+        <label for="email">Mail</label>
+        <input type="email" name="email" id="email">
+        <br>
+
+        <label for="genero" id="genero">Genero</label>
+        <select name="genero" id="genero">
+            <option value="">No especificar</option>
+            <option value="f">Femenino</option>
+            <option value="m">Masculino</option>
+            <option value="nb">No binario</option>
+        </select>
+        <br>
+
+        Pedido:
+        <br>
+        <input type="checkbox" name="pedido" value="sopa-de-calabaza">Sopa de calabaza<br>
+        <input type="checkbox" name="pedido" value="tarta-de-jamon">Tarta de Jamón<br>
+        <input type="checkbox" name="pedido" value="tortilla-de-papa">Tortilla de papa<br>
+        <input type="checkbox" name="pedido" value="coca-cola-500cc" checked>Coca Cola 500cc<br>
+        <input type="checkbox" name="pedido" value="flan">Flan<br>
+
+        Cubiertos <br>
+        <input type="radio" name="cubiertos" value="si">Si<br>
+        <input type="radio" name="cubiertos" value="no">No<br>
+
+        <label for="comentarios">Comentarios</label> <br>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+</body>
+
+</html>

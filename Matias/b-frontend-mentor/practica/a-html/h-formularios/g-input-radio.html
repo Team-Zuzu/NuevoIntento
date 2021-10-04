@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input radio</title>
+</head>
+<!-- 
+    radio -> Permite seleccionar una única opción de una lista de opciones relacionadas.
+    checkbox -> Permite seleccionar varias opciones de una lista de opciones relacionadas
+    select -> Crea una lista de opciones donde podemos seleccionar una o varias opciones
+
+    Cada opción irá dentro de una etiqueta <option></option>
+
+    Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup> con el atributo label para nombrar la categoría
+ -->
+<body>
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <h2>Genero</h2>
+        <label>
+            Masculino
+            <!-- 
+                name="genero" es para relacionar los 3 imputs="radio" entre si
+                value="masculino" es el valor del imput que será enviado
+                checked es para que esta opción aparezca preseleccionada 
+            -->
+            <input type="radio" name="genero" value="masculino" checked>
+        </label>
+        <label>
+            Femenino
+            <input type="radio" name="genero" value="femenino">
+        </label>
+        <label>
+            Otro
+            <input type="radio" name="genero" value="otro">
+        </label>
+    </form>
+</body>
+</html>

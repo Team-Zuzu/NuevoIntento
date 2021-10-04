@@ -1,0 +1,26 @@
+body{
+    /* position */
+    position: relative;
+    top: 0%;
+    left: 0%;
+
+    /* box model */
+    display: block;
+    width: 200px;
+    height: 200px;
+    padding: 10px 0px;
+    overflow: hidden;
+
+    /* text */
+    font-size: 16px;
+    text-align: center;
+    
+    /* visual */
+    color: #fff;
+    background-color: #333;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+
+    /* varios */
+    opacity: 1;
+}

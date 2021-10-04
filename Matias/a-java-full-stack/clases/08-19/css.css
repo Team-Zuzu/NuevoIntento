@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    background-color: brown;
+}
+a{
+    text-decoration: none;
+    padding: 2%;
+    background-color: crimson;
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+}

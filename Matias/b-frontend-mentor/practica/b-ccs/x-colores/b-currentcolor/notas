@@ -1,0 +1,7 @@
+Currentcolor:
+    Es una palabra clave que se puede usar en lugar de cualquier valor de color y usará el valor ya sea establecido o heredado en la propiedad color. 
+
+Nota adicionales: 
+    Cuando utilizamos currentcolor lo que estamos haciendo es tomar el color declarado que "que tenga mas cerca" currentcolor.
+    Si el propio elemento tiene un color declarado, usará eso, sino tomará el del padre y sino seguirá subiendo hasta que encuentre un color.
+    Si no tivieramos ningún color declarado lo que va a hacer es tomar el color por defecto del navegador (que habitualmente es el negro).

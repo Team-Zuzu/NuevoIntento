@@ -1,0 +1,7 @@
+Text-aling es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido NO TENGA ANCHO DECLARADO.
+
+Acepta 4 posibles valores
+    text-aling: left -> Alinea el contenido a la izquierda.
+    text-aling: right -> Alinea el contenido a la derecha
+    text-aling: center -> Alinea el contenido al centro
+    text-aling: justify -> Alinea el contenido de forma justificada. No es recomendable usarlo. 

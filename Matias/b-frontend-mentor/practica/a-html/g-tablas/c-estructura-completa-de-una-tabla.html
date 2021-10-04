@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura completa de una tabla</title>
+</head>
+<!-- 
+    Los títulos de las tablas se establecen con la etiqueta caption, es una etiqueta opcional y, según la especificación, esa etiqueta se coloca justo después de la etiqueta table. 
+
+    Las cabeceras de las tablas se establecen con la etiqueta thead.
+    Dentro tendremos una etiqueta tr normal pero, en el caso de las celdas, las estableceremos con la etiqueta th (table head) en lugar de td (table data).
+
+    El contenido de la table debe ir dentro de una etoqueta tbody para representar el cuerpo de la tabla
+
+    De forma opcional podemos colocar un tfoot a la tabla para establecer un pie de table, esto es algo que algunas tablas tienen como suma de cantidades o total. 
+ -->
+<body>
+        <h1>Tablas</h1>
+
+    <table>
+        <caption>HORARIO DE CLASES</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+                <td>Sociales</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:25</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Matemáticas</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Física</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Física</td>
+            </tr>
+            <tr>
+                <td>11:20 - 11:45</td>
+                <td>Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45 - 12:40</td>
+                <td>Inglés</td>
+                <td>Sociales</td>
+                <td>Inglés</td>
+                <td>Tutoría</td>
+                <td>Inglés</td>
+            </tr>
+            <tr>
+                <td>12:40 - 13:35</td>
+                <td>Música</td>
+                <td>Educación Física</td>
+                <td>Plástica</td>
+                <td>Religión</td>
+                <td>Música</td>
+            </tr>
+            <tr>
+                <td>13:35 - 14:30</td>
+                <td>Tecnología</td>
+                <td>Francés</td>
+                <td>Tecnología</td>
+                <td>Francés</td>
+                <td>Tecnología</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Asignaturas totales</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

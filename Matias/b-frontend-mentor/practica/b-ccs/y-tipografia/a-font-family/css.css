@@ -1,0 +1,9 @@
+body{
+    background-color: #333333;
+    color: rgb(240, 248, 255);
+
+}
+.text{
+    font-size: 40px;
+    font-family: monospace;
+}

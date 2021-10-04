@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar Input y Label</title>
+</head>
+<!-- 
+    label -> sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente
+    input -> sirve para crear un campo que permita al usuario interactuar. El único atributo obligatorio es name
+ -->
+
+<body>
+    <!-- Esta es la forma mas común de asociar un label a un input -->
+    <form>
+        <label for="name">Nombre</label>
+        <input id="name">
+        <button>Enviar Formulario</button>
+    </form>
+
+    <!-- Existe otra forma, menos común porque, al tener el label y el input en el mismo bloque no nos permite jugar tanto con los elementos (CCS) -->
+    <form>
+        <label>
+            Nombre
+            <input>
+        </label>
+        <button>Enviar Formulario</button>
+    </form>
+</body>
+
+</html>

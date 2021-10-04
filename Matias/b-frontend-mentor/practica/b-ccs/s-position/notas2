@@ -1,0 +1,4 @@
+z-index: Es la propiedad que nos permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.
+
+Notas adicionales:
+    a. El padre NUNCA se va a poner adelante del hijo, pero si podemos poner al hijo atrás del padre (siempre que el padre NO TENGA Z-INDEX (o tenga z-index: auto))

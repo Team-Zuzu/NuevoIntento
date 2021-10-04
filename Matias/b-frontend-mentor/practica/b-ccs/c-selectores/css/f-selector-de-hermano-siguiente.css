@@ -1,0 +1,21 @@
+/* SELECTOR DE HERMANO SIGUIENTE */
+
+/* .text-2 + .title-2{
+    background-color: burlywood;
+} */
+
+.text-2 + h2{
+    background-color: burlywood;
+}
+
+/* SELECTOR DE HERMANOSSSSSSS SIGUIENTESSSSS */
+
+/* .text-2 ~ p{
+    background-color: cadetblue;
+} */
+
+.text-2 ~ .text span{
+    background-color: cadetblue;
+}
+
+/* en todos los casos se puede poner tanto el nombre de una clase como el nombre de una etiqueta. además se puede combinar con un selector descendente */

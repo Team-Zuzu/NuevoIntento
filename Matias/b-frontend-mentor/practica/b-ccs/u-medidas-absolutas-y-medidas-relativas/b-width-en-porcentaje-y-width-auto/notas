@@ -1,0 +1,3 @@
+% -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto ocurre cuando usamos transform.
+
+auto -> Cuando usamos auto le pedimos al navegador que calcule en función del espacio disponible 

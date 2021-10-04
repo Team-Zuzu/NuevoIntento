@@ -1,0 +1,20 @@
+/*  SELECTORES ELEMENTALES*/
+
+/* Universales */
+ *{
+    background-color: lightcoral;
+ }
+
+ /* De tipo o etiqueta */
+ h1{
+     background-color: lightcyan;
+ }
+ p{
+     background-color: lightgreen;
+ }
+ ul{
+     background-color: red;
+ }
+ li{
+     background-color: blue;
+ }

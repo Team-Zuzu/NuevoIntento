@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.box1{
+    background-color: lightcoral;
+    position: relative;
+    z-index: 1;
+}
+.box2{
+    background-color: lightgreen;
+    margin-top: -50px;
+}
+.box3{
+    background-color: lightseagreen;
+}
+.container{
+    background-color: mediumpurple;
+    margin-top: -50px;
+    position: relative;
+}
+.title{
+    background-color: lightsteelblue;
+    margin: 0%;
+    position: relative;
+    z-index: 10;
+    opacity: 0.75;
+}
+.text{
+    margin: 0%;
+    margin-top: -45px;
+}

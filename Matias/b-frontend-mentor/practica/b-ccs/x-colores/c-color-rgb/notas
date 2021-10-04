@@ -1,0 +1,10 @@
+RGB/RGBA
+    En el modo RGB tenemos tres canales (red, green, blue) y tenemos 8 bits de color por canal, (cada bit tiene dos posibles valores, 0 o 1) lo que significa que tenemos 2^8 posibles valores que van desde 0 a 255.
+
+    Esto nos da un total de 255*255*255 = 16.581.375 colores.
+
+    Si ponemos todos los canales a 0 tendremos un negro puro y si ponemos a 255 tendremos un blanco
+
+    Para movernos por la gama de grices debemos poner los 3 canales con el mismo valor, si ponemos los 3 canales a 128 tendremos el gris puro.
+
+    El modo RGB nos da la opción de utilizar un cuarto canal que correspondería al canal alpha, es decir, la transparencia y su valor va desde 0 a 1. Tenemos dos sintaxis para utilizar para utilizar el canal alpha

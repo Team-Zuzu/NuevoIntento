@@ -1,0 +1,10 @@
+LOS MARGENES VERTICALES COLAPSAN
+    Mirá el ccs que hiciste y emulá la página. Vas a notar que el margin bottom de la primera y el margin top de la segunda se solapan. 
+    La forma correcta de dar espacios verticales a los bloques es darles SOLAMENTE MARGIN BOTTOM
+
+HEADER DEJA ALGO PARECIDO A UN PARRAFO EN SU BORDE SUPERIOR
+    Este error pasa si se le da un height y un margin-bottom. Tiene 3 soluciones posibles: 
+        padding-top
+        overflow: hidden
+        border-top
+    Agregar cualquiera de las 3 sentencias al header "lo desbuguea"

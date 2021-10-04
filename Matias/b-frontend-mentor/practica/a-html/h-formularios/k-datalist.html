@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist</title>
+</head>
+<!-- 
+    La parte mas significativa para usar un datalist en lugar de un select es que tenemos incluido un buscador (probá escribir "te" en el buscador)
+
+    La desventaja es que el value es visible :/
+ -->
+<body>
+    <h1>Elemento seleccionables</h1>
+    <form>
+        <input type="list" list="mascotas">
+        <datalist id="mascotas">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="hamster">Hamster</option>
+            <option value="conejo">Conejo</option>
+            <option value="loro">Loro</option>
+            <option value="canario">Canario</option>
+            <option value="serpiente">Serpiente</option>
+            <option value="tarantula">Tarantula</option>
+        </datalist>
+    </form>
+</body>
+</html>

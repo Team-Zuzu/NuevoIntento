@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio get vs post</title>
+</head>
+<!-- 
+    Este tema, respecto a HTML es mas bien teorico e informativo ya que esta información, solo para HTML, no sirve para nada. 
+    Este tema sirve durante la programación con JavaScript.
+
+    GET -> Este es el metodo por defecto. Este metodo envía formularios a traves de la URL
+
+    POST -> Este metodo envía formularios "a traves de la parte de atrás de la página" (por llamarlo de alguna manera).
+
+    IMPORTANTE: Los imput deben contar con el atributo name="", en caso contrario NO VAN A ENVIAR INFORMACIÓN (es como si no existieran). 
+ -->
+<body>
+    <form action="enviar.html" method="GET">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido">
+        <input type="submit">
+    </form>
+</body>
+</html>

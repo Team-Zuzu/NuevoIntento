@@ -1,0 +1,27 @@
+body{
+    background-color: #333;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+.text{
+    font-size: 40px;
+}
+.text2{
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-shadow: 3px 3px 10px slateblue, 0px 0px 8px blueviolet;
+}
+.text3{
+    text-transform: uppercase;
+    text-shadow: 3px 2px 1px blue, -3px -2px 1px red;
+}
+.link{
+    font-size: 40px;
+    color: mediumblue;
+    text-decoration: underline;
+    border-bottom: 4px solid #fff;
+}
+.text4{
+    text-decoration: underline;
+    border-bottom: 4px solid #fff;
+}

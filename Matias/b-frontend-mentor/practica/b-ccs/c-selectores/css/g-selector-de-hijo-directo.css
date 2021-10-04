@@ -1,0 +1,7 @@
+/* SELECTOR DE HIJO DIRECTO */
+
+.container > p{
+    background-color: coral;
+}
+
+/* selecciona solo los hijos directos. en este caso estamos seleccionando los hijos DIRECTOS de container de tipo paragraph. container tiene 3 hijos de tipo paragraph pero solo 2 son directos (el otro es nieto)*/

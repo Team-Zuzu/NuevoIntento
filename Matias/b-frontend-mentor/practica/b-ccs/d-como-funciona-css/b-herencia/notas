@@ -1,0 +1,7 @@
+HERENCIA
+
+    Es la capacidad que tienen algunos elementos de heredar algunas propiedades de los elementos que los contienen (padres, abuelos, etc.).
+
+    *   Todos los temas de colores y fuentes, en la mayoría de ocaciones, se heredan. Hay ciertas ocaciones en las que esto no pasa como con los url. 
+    *   Cuando queremos forzar la herencia debemos usar el valor "inherit".
+    *   Cuando queremos forzar que un objeto no herede su estilo debemos usar el valor "initial"

@@ -1,0 +1,29 @@
+Border:
+    Es la propiedad que nos permite modificar el borde de la caja
+    Es un shorthand (propiedad abrevidada) que agrupa 3 propiedades
+        border-width: ancho del borde
+            border-top-width
+            border-right-width
+            border-bottom-width
+            border-left-width
+        border-style: estilo del borde
+            border-top-style
+            border-right-style
+            border-bottom-style
+            border-left-style
+                Listado de valores para style:
+                    none
+                    hidden
+                    dotted
+                    dashed
+                    solid
+                    double
+                    groove
+                    ridge
+                    inset
+                    outset
+        border-color: color del borde
+            border-top-color
+            border-right-color
+            border-bottom-color
+            border-left-color

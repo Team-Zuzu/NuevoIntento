@@ -1,0 +1,41 @@
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0%;
+}
+
+header{
+    background-color: #999;
+    height: 50px;
+    padding: 8px;
+}
+
+.box{
+    background-color: #777;
+    width: 200px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+}
+
+.line{
+    background-color: #444;
+    color: lightskyblue;
+    margin-right: 20px;
+
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.buttons{
+    background-color: lightyellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+
+.button{
+    padding: 20px 40px;
+    margin-left: 150px;
+}

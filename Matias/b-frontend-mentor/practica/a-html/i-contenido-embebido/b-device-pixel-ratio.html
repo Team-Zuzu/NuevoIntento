@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device pixel ratio</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<!-- 
+    Esto sirve para que cargue una imágen u otra según el dispositivo. 
+
+    Este HTML no sirve para nada realmente, Dorian Desings solo quería explicar unas cosas y yo copié todo el HTML al pedo xD
+
+    Lo realmente importante son los comentarios de a continuación:
+
+    DPR (Device Pixel Ratio)
+        Es la relación que existe entre los pixeles reales que tiene el dispositivo y los pixeles que tenemos disponibles para "pintar" contenido
+    DPR = pixeles reales / pixeles disponibles
+
+    width (ancho)
+    heigh (alto)
+        No es recomendable usar estos atributos para darle tamaño a una imagen desde el HTML. Eso es algo que deberíamos hacer desde CCS.
+
+        Hay casos en los que si tenemos que establecer el ancho y alto de una imágen desde HTML pero son casos muy concretos: 
+            * Cuando las imágenes son dinamicas y las cargamos desde JavaScript.
+ -->
+<body>
+    <h1>Contenido embebido</h1>
+    <img src="/i-contenido-embebido/assets/images/Pokemon.webp" width="300" alt="Una imagen de Pikachu">
+</body>
+</html>

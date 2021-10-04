@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imputs extra</title>
+</head>
+<!-- 
+    color -> Se utiliza para especificar un color
+    number -> Se utiliza para valores
+    range -> Se utiliza para establecer un rango
+    reset -> Se utiliza para resetear el formulario
+    text -> Valor por defecto
+ -->
+<body>
+    <form>
+        <div>
+            <input type="color">
+        </div>
+        <div>
+            <input type="number">
+        </div>
+        <div>
+            <input type="range" step="10" min="0" max="50">
+        </div>
+        <div>
+            <input type="reset">
+        </div>
+    </form>
+
+    <hr>
+    <!-- Este es el valor por defecto de los input. Es importante saber que esto es type="text" porque si tenemos, por ejemplo, un input="hidden" que, en función de lo que haya seleccionado el usuario se muestre o no desde JavaScript podríamos cambiar el input="hidden" y decirle que si ha seleccionado la opción A (por ejemplo) que el imput cambie de hidden a text (entonces el campo se mostraría)-->
+    <form>
+        <input type="text">
+    </form>
+</body>
+</html>

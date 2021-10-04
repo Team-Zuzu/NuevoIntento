@@ -1,0 +1,16 @@
+Transformaciones de texto. 
+    Text-transform: Esta propiedad nos permite hacer transformaciones ESTÉTICAS en nuestro texto. 
+    Admite los valores: 
+        none: No se aplicará ninguna transformacion. 
+        uppercase: El texto se pondrá en mayúsculas
+        lowercase: El texto se pondrá en minúsculas
+        capitalize: Transforma la primera letra de cada palabra en mayúscula.
+Adornos en el texto
+    text-decoration: Esta propiedad nos permite controlar la línea que podemos poner en los textos. 
+    Admite los valores:
+        none: Elimina cualquier linea. 
+        underline: Coloca una linea bajo el texto. 
+        overline: Colouna una linea sobre el texto.
+        line-through: Coloca una linea tachando el texto. 
+
+    Text-shadow: Funciona exactamente igual que box-shadow, con la única diferencia que no admite el valor inset ni la expanción de la sombra. 

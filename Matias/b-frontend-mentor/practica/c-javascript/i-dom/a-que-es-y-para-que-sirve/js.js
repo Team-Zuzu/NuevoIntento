@@ -1,0 +1,1 @@
+console.log('¿qué es el dom?');

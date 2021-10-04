@@ -1,0 +1,10 @@
+rem -> Corresponde a la medidad de la letra "m" de la raiz del documento (html).
+
+    ejemplo: 16px = 1rem
+    recomendación: para tamaños de fuente debemos usar SIEMRPE REM.
+
+em -> Corresponde a la medida de la letra "m" del contexto donde nos encontramos. 
+
+El estandar del tamaño de la fuente por defecto en la raiz del documento es 10px, y NO ES RECOMENDABLE MODIFICARLO.
+
+NOTA: Tanto "em" como "rem" se calcula en base a la propuedad font-size (tamaño de fuente)

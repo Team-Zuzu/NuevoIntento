@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    background-color: #333;
+}
+.container{
+    border-top: 400px solid burlywood;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    /* height: 300px;
+    width: 300px;
+    background-color: burlywood;
+    color: #fff; */
+}
+/* .text{
+    margin: 0%;
+} */

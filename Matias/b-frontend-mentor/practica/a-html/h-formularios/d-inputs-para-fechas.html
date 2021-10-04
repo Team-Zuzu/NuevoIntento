@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs para fechas</title>
+</head>
+<!-- 
+    date -> Se utiliza para introducir una fecha
+    datetime -> Obsoleto
+    datetime-local -> fecha y hora, no funciona en firefox
+    time -> Se utiliza para introducir una hora
+        TIP
+            Se recomienda utilizar date y time para seleccionar fecha y hora
+    month -> Se utiliza para introducir un mes
+    week -> Se utiliza para introducir el número de semana del año
+ -->
+<body>
+    <form>
+        <input type="date">
+    </form>
+
+    <hr>
+
+    <form>
+        <input type="datetime">
+    </form>
+
+    <hr>
+
+    <!-- No funciona en Firefox -->
+    <form>
+        <input type="datetime-local">
+    </form>
+
+    <hr>
+
+    <!-- Si necesitamos en un formulario añadir fecha y hora, el truco es utilizar un date y time (ya que datetime-local no funciona en Firefox) -->
+    <form>
+        <input type="date">
+        <input type="time">
+    </form>
+
+    <hr>
+
+    <form>
+        <input type="month">
+    </form>
+
+    <hr>
+    
+    <form>
+        <input type="week">
+    </form>
+
+</body>
+</html>

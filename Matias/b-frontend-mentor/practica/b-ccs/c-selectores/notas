@@ -1,0 +1,27 @@
+SELECTORES
+
+    Selectores Simples
+        Selectores elementales
+            Selector Universal -> *
+            Selector de tipo o etiqueta -> Nombre de la etiqueta
+        Selectores de atributo
+            id -> id del elemento
+            clase -> clase del elemento
+            otros atributos
+                [nombre-del-atributo]
+                [atributo="valor"]
+                [atributo^="valor"] //selecciona el valor que coincida AL PRINCIPIO
+                [atributo*="valor"] //selecciona el valor que coincida independientemente de donde esté
+                [atributo$="valor"] //selecciona el valor que coincida AL FINAL
+                [atributo|="valor"] //selecciona valores que puedan ir solos o con un guion (en o en-GB)
+    Selectores Compuestos   //requieren mas de una palabra, una palabra y un simbolo, etc.
+        Selectores Agrupados                //hay que ir poniendo comas
+        Selectores Combinadores
+            Selector descendiente           //nos permite seleccionar un hijo
+            Selector de hermano siguiente   //nos permite seleccionar el elemento siguiente
+            Selector de hijo directo        //nos permite seleccionar solo a los hijos directos
+        Pseudoclases - Pseudoelementos
+
+Los selectores de etiqueta y los selectores de clase se usan en casos muy concretos. Los que mas se suelen utilizar son los selectores de clase. 
+No es recomendable dar estilos con ID. Esto es porque los ID son identificadores, por lo tanto, solo puede haber uno y uno de los principios de CSS es que los estilos sean reutilizables. 
+No hay limites en el número de clases que se le puede poner a un elemento.

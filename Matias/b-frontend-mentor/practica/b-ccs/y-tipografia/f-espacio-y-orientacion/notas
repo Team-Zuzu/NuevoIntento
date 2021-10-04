@@ -1,0 +1,9 @@
+Espaciado en fuentes y textos
+    letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS
+
+    word-spacing: Establece la separación entre palabras, se puede establecer cualquier medida válida para CSS
+
+    line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multiplicará por el font size del texto al que se lo estemos aplicando.
+    
+Orientación del texto.
+    writing-mode: Establece la dirección del texto

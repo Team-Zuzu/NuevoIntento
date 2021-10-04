@@ -1,0 +1,7 @@
+Colores
+    La mayoria de las pantallas funcionan con un modo de calor aditivo. La suma de RGB da como resultado un blanco. 
+    Tenemos varias formas de dar color en CSS
+
+    Keywords -> Palabras clave que representan colores https://www.w3.org/wiki/CSS/Properties/color/keywords
+    
+    IMPORTANTE: Recordá que existe el color "transparent"

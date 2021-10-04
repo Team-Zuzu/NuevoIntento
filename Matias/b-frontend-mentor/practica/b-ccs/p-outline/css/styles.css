@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: lightyellow;
+}
+.border, .outline{
+    background-color: #888;
+    width: 100px;
+    padding: 10px 25px;
+    margin: 50px 100px;
+}
+.border{
+    border: 2px solid lightgreen;
+}
+.outline{
+    outline: 3px dashed lightgreen;
+    outline-offset: -12px;
+    border: 5px solid lightgoldenrodyellow;
+}

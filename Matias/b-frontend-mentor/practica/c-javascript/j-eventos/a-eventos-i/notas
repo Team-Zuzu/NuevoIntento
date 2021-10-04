@@ -1,0 +1,10 @@
+Un evento es cualquier cosa que sucede en nuestro documento.
+    El contenido se ha leido
+    El contenido se ha cargado
+    El usuario mueve el ratón
+    El usuario pulsa una tecla
+    La ventana se ha cerrado
+    Etc.
+
+Esta es la forma correcta de añadir un evento
+    Element.addEventListener('event', callback);

@@ -1,0 +1,20 @@
+Google Icons
+    
+    Material Icons
+    https://fonts.googleapis.com/css?family=Material+Icons
+
+    Material Icons Outlined
+    https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+
+    Material Icons Two Tone
+    https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+
+    Material Icons Rounded
+    https://fonts.googleapis.com/css?family=Material+Icons+Round
+
+    Material Icons Sharp
+    https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+
+    Nota: 
+        * Si vas a usar una gran cantidad de iconos en tu web conviene usar la librería remota.
+        * Si vamos a usar unos pocos es mejor descargarlos en formato svg y utilizarlos como imágenes.

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de accesibilidad</title>
+</head>
+<!-- 
+    tabindex -> Permite al usuario moverse por la página apretando tab
+
+    aria-label -> Para invidentes. Acá podemos especificar que información queremos que el navegador lea
+        En el video quien explica usó la extensión ChromeVox Classic Extension (de Chrome)
+
+    role -> Le da al navegador información sobre que tipo de elementos estamos posicionados. 
+        Si escribimos role= y agregamos manualmente las comillas se despliega una ventana que muestra tooodos los roles que podemos elegir. 
+ -->
+<body>
+    <!-- tabindex -->
+    <h1 tabindex="1">Atributos de accesibilidad</h1>
+    <p tabindex="2">Parrafo 1</p>
+    <p tabindex="3">Parrafo 2</p>
+    <p tabindex="4">Parrafo 3</p>
+    <!-- aria-label y role-->
+    <a href="#" role="link" aria-label="Leer mas sobre la belleza de mi Taby">Leer más</a>
+</body>
+</html>

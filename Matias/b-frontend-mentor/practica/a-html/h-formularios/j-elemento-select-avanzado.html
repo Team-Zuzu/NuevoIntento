@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento select avanzado</title>
+</head>
+<!-- 
+    Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup> con el atributo label para nombrar la categoría
+ -->
+<body>
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <select name="mascotas">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+            <optgroup label="aves">
+                <option value="loro">Loro</option>
+                <option value="canario">Canario</option>
+            </optgroup>
+            <optgroup label="otros">
+                <option value="serpiente">Serpiente</option>
+                <option value="tarantula">Tarantula</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>

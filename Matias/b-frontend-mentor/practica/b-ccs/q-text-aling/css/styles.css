@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: #fff;
+}
+.text{
+    text-align: justify;
+}
+.border{
+    background-color: #888;
+    border: lightgreen 2px solid;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.link{
+    color: lightskyblue;
+    background-color: darkslategrey;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+/* text-aling: center puede centrar una imagen si esta está dentro de un contenedor (revisar codigo html)*/
+.image2{
+    width: 250px;
+}
+.img-container{
+    text-align: center;
+}

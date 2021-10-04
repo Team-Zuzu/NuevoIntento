@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta picture</title>
+</head>
+<!-- 
+    picture -> Funciona igual que srcset pero nos da mas opciones.
+ -->
+<body>
+    <!-- 
+        La estructura de picture es compleja. 
+            Dentro de picture debe ir un sourse y un img.
+                Dentro del sourse, como atributo, debe ir un srcset
+            El img contiene una imágen de reserva (por si source no funciona en el navegador).
+
+        ¿Cuál es mejor usar img srcset o picture? Depende, se utiliza mas picture porque ofrece mas opciones pero puede que en algún caso no sea soportado por el navegador (está en desarrollo).
+        
+        media -> Nos permite elegir una condición para mostrar o no la imagen de source
+    -->
+    <picture>
+        <source 
+        srcset="
+        /i-contenido-embebido/assets/images/Pokemon-para-celulares.webp,
+        /i-contenido-embebido/assets/images/Pokemon-para-celulares.jpg,
+        /i-contenido-embebido/assets/images/Pokemon-para-celulares.webp 2x,
+        /i-contenido-embebido/assets/images/Pokemon-para-celulares.jpg 2x" 
+        media="(max-width:800px)">
+
+        <img src="/i-contenido-embebido/assets/images/tenor.webp" alt="Un Pikachu diciendo tu eres preciosa">
+    </picture>
+</body>
+</html>

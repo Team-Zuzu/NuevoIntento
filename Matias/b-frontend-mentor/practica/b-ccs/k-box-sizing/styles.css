@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+/* Esta es una muy buena páctica */
+
+header{
+    background-color: #999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 8px;
+}
+
+body{
+    color: #fff;
+    background: #333;
+    margin: 0%;
+}
+
+.box{
+    background: lightslategrey;
+    height: 50px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    border: 5px solid darkblue;
+}
+
+.line{
+    color: lightskyblue;
+}
+
+.buttons{
+    background: lightslategrey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button{
+    padding: 20px 40px;
+    margin-left: 100px;
+}

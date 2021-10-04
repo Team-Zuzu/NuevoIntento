@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    margin: 0%;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #333;
+    border: blue 4px solid;
+}
+/* .container{
+    width: 100%;
+    max-width: 800px;
+    min-width: 600px;
+    height: 60vw;
+    max-height: 500px;
+    min-height: 400px;
+    background-color: aquamarine;
+} */
+/* .text{
+    margin: 0%;
+} */
+.footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: brown;
+    text-align: center;
+}

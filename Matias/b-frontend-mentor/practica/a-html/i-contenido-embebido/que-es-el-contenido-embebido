@@ -1,0 +1,24 @@
+El contenido embebido es todo el contenido que nos traemos desde fuera. 
+
+Estos archivos son los que mas peso (tamaño) añaden a un sitio web
+
+Los tipos mas conocidos son:
+    Imagenes
+    Audio
+    Video
+    Iframes
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+IMAGENES
+
+Los formatos de imagenes para la web los podemos clasificar en 2 tipos: 
+
+Vectoriales:
+    svg (recomendado siempre que se pueda)
+
+Mapa de bits:
+    jpg
+    png 8 y 24 (si se necesitan transparencias)
+    gif (si se necesitan imagenes animadas)
+    webp (el formato que menos pesa)

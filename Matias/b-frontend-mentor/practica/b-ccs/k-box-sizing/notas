@@ -1,0 +1,5 @@
+Box-sizing: 
+    Es la propiedad que nos permite controlar el calculo que hace le navegador a la hora de modificar las propiedades content, padding y border.
+    Los 2 valores que podemos darle son 
+        content-box -> Valor por defecto
+        border-box -> Calculo de tamaño del elemento incluyendo el padding y el border

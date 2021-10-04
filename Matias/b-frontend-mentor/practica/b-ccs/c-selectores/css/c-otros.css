@@ -1,0 +1,31 @@
+/* OTROS SELECTORES */
+
+/* [nombre-del-atributo] //selecciona todos los atributos con este nombre */
+[href]{
+    background-color: chartreuse;
+}
+
+/* [atributo="valor"] //selecciona el valor */
+[href="https://google.com"]{
+    background-color: palegoldenrod;
+}
+
+/* [atributo^="valor"] //selecciona el valor que coincida AL PRINCIPIO */
+[href^="color"]{
+    background-color: orangered;
+}
+
+/* [atributo*="valor"] //selecciona el valor que coincida independientemente de donde esté */
+[href*="modo"]{
+    background-color: grey;
+}
+
+/* [atributo$="valor"] //selecciona el valor que coincida AL FINAL */
+[href$="azul"]{
+    background-color: cornflowerblue;
+}
+
+/* [atributo|="valor"] //selecciona valores que puedan ir solos o con un guion (en o en-GB) */
+[lang|="en"]{
+    background-color: chartreuse;
+}

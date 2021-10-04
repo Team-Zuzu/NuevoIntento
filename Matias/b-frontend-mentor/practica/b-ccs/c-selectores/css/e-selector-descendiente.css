@@ -1,0 +1,8 @@
+/* SELECTOR DESCENDIENTE */
+
+div .title-2{
+    background-color: burlywood;
+}
+
+/* a esto también se lo denomina "seleccionar hijos". 
+    div es el padre y title-2 es el hijo */

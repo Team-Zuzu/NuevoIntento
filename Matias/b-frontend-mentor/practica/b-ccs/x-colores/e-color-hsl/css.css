@@ -1,0 +1,10 @@
+body{
+    /* background-color: green; */
+    background-color: hsl(60, 100%, 50%);
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color:hsl(0, 79%, 72%);
+    box-shadow: 5px 5px 10px hsl(0 0% 0% / 50%);
+}

@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    background: #333;
+    color: lightcyan;
+}
+.box{
+    background: lightgray;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    /* overflow: hidden; */
+    overflow: auto;
+}
+.box1, .box2{
+    padding: 20px;
+    background-color: lightcyan;
+}
+.text{
+    /* width: 250px; */
+    margin: 0%;
+    color: darkslategrey;
+}
