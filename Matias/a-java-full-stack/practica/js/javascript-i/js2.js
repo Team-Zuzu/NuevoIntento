@@ -308,7 +308,7 @@ function capitalize2(cadena) {
         cadena[i] = (cadena[i].substring(0, 1).toUpperCase() + cadena[i].substring(1))
     return cadena.join(' ')
 }
-console.log(capitalize2('prince of persia'))
+// console.log(capitalize2('prince of persia'))
 
 
 // 29.Ejercicio 11: escriba una función de JavaScript que busque la palabra

@@ -1,4 +1,4 @@
-const nav = `
+const navBar = `
     <nav>
         <a href="#">Home</a>
         <a href="#">Recetas</a>
@@ -6,7 +6,7 @@ const nav = `
         <a href="#">Registrese</a>
     </nav>`
 
-let tabla = `            
+let table = `            
     <table>
         <tr>
             <th>Codigo</th>
@@ -15,8 +15,9 @@ let tabla = `
             <th>Imagen</thd>
         </tr>
     `
+
 for (let i = 0; i < data.length; i++) {
-    tabla += `        
+    table += `        
             <tr>
              <td>${data[i].codigo}</td>
              <td>${data[i].nombre}</td>
@@ -24,8 +25,14 @@ for (let i = 0; i < data.length; i++) {
              <td><img src=${data[i].imagen} alt=${data[i].nombre}></td>
             </tr>`
 }
-tabla += '</table>'
+table += '</table>'
 
-document.getElementById('header').innerHTML = nav
-document.getElementById('footer').innerHTML = nav
-document.getElementById('tabla').innerHTML = tabla
+const header = document.getElementById('header')
+header.innerHTML = navBar
+
+const footer = document.getElementById('footer')
+footer.innerHTML = navBar
+
+const tabla = document.getElementById('tabla')
+tabla.innerHTML = table
+
