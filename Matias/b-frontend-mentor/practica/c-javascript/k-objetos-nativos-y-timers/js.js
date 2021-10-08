@@ -80,14 +80,14 @@ console.log(date);
         setInterval(() => {code}, delay-in-miliseconds) - Hace que se ejecute la función cada cierto tiempo (como fixedUpdate, mas o menos). Si lo referenciamos mediante una variable/constante podemos pararlo con clearInterval(referencia).
 */
 
-/*
+
 //Ejemplo de funcion escrita adentro del timeout
 button.addEventListener('click', () => {
     setTimeout(() => {
         console.log('hola');
     }, 3000);
 })
-*/
+
 
 /*
 //ejemplo de funcion escrita afuera del timeout
@@ -111,11 +111,11 @@ button.addEventListener('click', () => {
 })
 */
 
-let num = 0
-const interval = setInterval(() => {
-    console.log(num);
-    num++;
-}, 1000);
-button.addEventListener('click', () => {
-    clearInterval(interval)
-})
+// let num = 0
+// const interval = setInterval(() => {
+//     console.log(num);
+//     num++;
+// }, 1000);
+// button.addEventListener('click', () => {
+//     clearInterval(interval)
+// })

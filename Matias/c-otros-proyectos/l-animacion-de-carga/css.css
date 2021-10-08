@@ -4,10 +4,18 @@
 
 body {
     margin: 0;
-    background: #001f38;
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flash {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
 }
 
 .loader {
@@ -22,7 +30,7 @@ body {
     left: calc(50% - 100px);
     width: 200px;
     height: 200px;
-    border-bottom: 100px solid #2196f3;
+    border-bottom: 100px solid #222;
     border-radius: 50%;
     animation: girar 2s linear infinite;
 }
@@ -36,9 +44,9 @@ body {
     }
 }
 
-.loader .pelota{
+.loader .pelota {
     position: absolute;
-    background: #fff;
+    background: #222;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -91,3 +99,175 @@ body {
         transform: translateY(250px);
     }
 }
+
+/* SECCIÓN CARGA-TERMINADA */
+
+.flash.carga-terminada {
+    background: transparent;
+    animation: flash 0.5s linear 1;
+}
+
+@keyframes flash {
+    0% {
+        background: #fff;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+.loader .semi-circulo.carga-terminada {
+    border-bottom: 100px solid #222;
+    /* transform: rotate(90deg); */
+    animation: none;
+    transition: 0.75s;
+}
+
+.loader .pelota.carga-terminada {
+    animation: none;
+    transition: 0.75s;
+}
+
+.loader .pelota1.carga-terminada {
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    background: #222;
+}
+
+.loader .pelota2.carga-terminada {
+    top: calc(50% - 100px);
+    left: calc(50% + 50px);
+}
+
+/* SECCIÓN CODO-A-CODO */
+
+.loader .semi-circulo.codo-a-codo {
+    transform: rotate(90deg) scale(80%);
+    left: calc(50% - 250px);
+    top: calc(50% - 80px)
+}
+
+.loader .semi-circulo.codo-a-codo::after{
+    content: '';
+    position: absolute;
+    width: 190px;
+    height: 100px;
+    transform: translate(220px);
+    border-bottom: 100px solid #222;
+    border-radius: 50%;
+}
+
+.loader .pelota.codo-a-codo {
+    transform: scale(200%)
+}
+
+.loader .pelota1.codo-a-codo {
+    top: calc(50% + 25px);
+    left: calc(50% - 120px);
+}
+
+.loader .pelota1.codo-a-codo::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 50%;
+    top: 0;
+    left: 50px;
+}
+
+.loader .pelota1.codo-a-codo::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 80px;
+    background: #222;
+    top: -30px;
+    left: 85px;
+}
+
+.loader .pelota2.codo-a-codo {
+    top: calc(50% + 25px);
+    left: calc(50% + 80px);
+}
+
+.loader .pelota2.codo-a-codo::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 50%;
+    top: 0;
+    left: 60px;
+}
+
+.loader .pelota2.codo-a-codo::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 50px;
+    background: #222;
+    top: 0px;
+    left: 95px;
+}
+
+.loader .pelota1.pelota.codo-a-codo .pelota1b {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: calc(50% + 60px);
+    background: #222;
+    border-radius: 50%;
+}
+
+.loader .pelota1.pelota.codo-a-codo .pelota1b::after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 50px;
+    background: #222;
+    border-radius: 50%;
+}
+
+.loader .pelota1.pelota.codo-a-codo .pelota1b::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 80px;
+    top: -30px;
+    left: 85px;
+    background: #222;
+}
+
+.loader .pelota2.pelota.codo-a-codo .pelota2b {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: calc(50% + 60px);
+    background: #222;
+    border-radius: 50%;
+}
+
+/* .loader .pelota2.pelota.codo-a-codo .pelota2b::after{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 50px;
+    background: yellow;
+    border-radius: 50%;
+}
+.loader .pelota2.pelota.codo-a-codo .pelota2b::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 50px;
+    top: 0px;
+    left: 85px;
+    background: yellow;
+} */
