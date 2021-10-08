@@ -42,7 +42,7 @@
 
 // 9. Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
 // let frase = prompt('ingrese una frase');
-// const BuscadorDeAs = () => {
+// function BuscadorDeAs() {
 //     let cant = 0;
 //     for (const letra of frase) if (letra == 'a' || letra == 'A') cant++;
 //     return cant;

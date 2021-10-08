@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #001f38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+    height: 100vh;
+    width: 200px;
+}
+
+.loader .semi-circulo {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    border-bottom: 100px solid #2196f3;
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader .pelota{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.loader .pelota1 {
+    top: calc(50% - 50px);
+    left: calc(50% - 100px);
+    animation: rebotar1 2s linear infinite;
+}
+
+@keyframes rebotar1 {
+    /* cada 10% recorre 50px */
+    /* 10% equivale a 0.2s */
+    /* la pelotita recorre 50px cada 0.2s */
+    0% {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(-60px);
+    }
+    50% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.loader .pelota2 {
+    top: calc(50%);
+    left: calc(50% + 50px);
+    animation: rebotar2 2s linear infinite;
+}
+
+@keyframes rebotar2 {
+    /* cada 10% recorre 50px */
+    /* 10% equivale a 0.2s */
+    /* la pelotita recorre 50px cada 0.2s */
+    0% {
+        transform: translateY(250px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
