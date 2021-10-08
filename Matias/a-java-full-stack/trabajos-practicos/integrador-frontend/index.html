@@ -25,14 +25,27 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/general-dist.css">
-    <link rel="stylesheet" href="./styles/header-dist.css">
-    <link rel="stylesheet" href="./styles/main-dist.css">
-    <link rel="stylesheet" href="./styles/footer-dist.css">
+        <link rel="stylesheet" href="./styles/load.css">
+        <link rel="stylesheet" href="./styles/general-dist.css">
+        <link rel="stylesheet" href="./styles/header-dist.css">
+        <link rel="stylesheet" href="./styles/main-dist.css">
+        <link rel="stylesheet" href="./styles/footer-dist.css">
     <title>Integrador Frontend</title>
 </head>
 
 <body>
+    <!-- Animación de carga de página -->
+    <div class="loader" id="loader">
+        <div class="flash"></div>
+        <div class="semi-circulo"></div>
+        <div class="pelota pelota1">
+            <div class="pelota1b"></div>
+        </div>
+        <div class="pelota pelota2">
+            <div class="pelota2b"></div>
+        </div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -120,16 +133,8 @@
                 <a href="#">Conocé más</a>
             </div>
 
-            <!-- <picture>
-                <source media="(min-width: 1200)" srcset="./assets/images/buenos-aires720.jpg">
-                <img src="./assets/images/buenos-aires480.jpg" alt="Buenos Aires">
-            </picture>
-            <picture>
-                <source media="(min-width: 1200)" srcset="./assets/images/mask720.jpg">
-                <img src="./assets/images/mask480.jpg" alt="Máscara">
-            </picture> -->
-
-            <img src="./assets/images/buenos-aires720.jpg" alt="Buenos Aires" srcset="./assets/images/buenos-aires480.jpg 2x">
+            <!-- <img src="./assets/images/buenos-aires720.jpg" alt="Buenos Aires" srcset="./assets/images/buenos-aires480.jpg 2x"> -->
+            <video src="../../../c-otros-proyectos/z-assets/pexels-free-video.mp4" autoplay muted loop></video>
             <img src="./assets/images/mask720.jpg" alt="Máscara" srcset="./assets/images/mask480.jpg 2x">
 
         </section>
@@ -186,7 +191,8 @@
     </footer>
 
     <script src="./js/vanilla-tilt.min.js"></script>
-    <script src="./js/header.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/load.js"></script>
 </body>
 
 </html>

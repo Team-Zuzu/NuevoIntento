@@ -379,6 +379,15 @@ main .place .zona-de-escritura a:hover {
     max-height: 720px;
 } */
 
+main .place video{
+	position: absolute;
+	width: 100%;
+	max-width: 1280px;
+	height: 100%;
+	max-height: 720px;
+	object-fit: cover;
+}
+
 main .place img {
 	position: absolute;
 	width: 100%;
@@ -388,9 +397,9 @@ main .place img {
 	object-fit: cover;
 }
 
-main .place img:first-of-type {
+/* main .place img:first-of-type {
 	filter: brightness(0.5);
-}
+} */
 
 main .place img:last-of-type {
 	mix-blend-mode: screen;
