@@ -21,7 +21,8 @@ body {
 .loader {
     position: relative;
     height: 100vh;
-    width: 200px;
+    width: 100%;
+    transition: 0.75s;
 }
 
 .loader .semi-circulo {
@@ -140,6 +141,66 @@ body {
 }
 
 /* SECCIÓN CODO-A-CODO */
+
+/* DECLARACIÓN */
+
+.loader::before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 150px);
+    height: 200px;
+    width: 350px;
+    background: transparent;
+    transition: 0.75s;
+}
+
+.loader .semi-circulo::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -100;
+    transition: 0.75s;
+}
+
+.loader .pelota::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -100;
+    transition: 0.75s;
+}
+
+.loader .pelota::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    background: #222;
+    z-index: -100;
+    transition: 0.75s;
+}
+
+/* TRANSICION */
+
+.loader.codo-a-codo{
+    height: 70vh;
+}
+
+.loader.codo-a-codo::before{
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 700px;
+    top: calc(50% - 100px);
+    left: calc(50% - 350px);
+    transform: skew(-20deg);
+    background: yellow;
+}
 
 .loader .semi-circulo.codo-a-codo {
     transform: rotate(90deg) scale(80%);

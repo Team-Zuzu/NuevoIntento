@@ -6,6 +6,7 @@ window.addEventListener("click", event => {
     agregarClases('carga-terminada');
     setTimeout(() => {
         agregarClases('codo-a-codo');
+        loader.classList.add('codo-a-codo')
     }, 2000);
 });
 
