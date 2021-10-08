@@ -1,5 +1,3 @@
-
-
 const loader = document.querySelector('.loader')
 
 window.addEventListener("click", event => {
@@ -7,7 +5,10 @@ window.addEventListener("click", event => {
     setTimeout(() => {
         agregarClases('codo-a-codo');
         loader.classList.add('codo-a-codo')
-    }, 2000);
+    }, 1250);
+    setTimeout(() => {
+        loader.classList.add('fin')
+    }, 2500)
 });
 
 function agregarClases(cad){
@@ -15,5 +16,3 @@ function agregarClases(cad){
         loader.children[i].classList.add(cad)
     }
 }
-
-

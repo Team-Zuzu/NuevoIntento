@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background: #fff;
+    background: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,7 @@ body {
 }
 
 .loader {
+    background: #fff;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -147,7 +148,7 @@ body {
 .loader::before{
     content: '';
     position: absolute;
-    top: calc(50% - 100px);
+    top: calc(30% - 100px);
     left: calc(50% - 150px);
     height: 200px;
     width: 350px;
@@ -178,7 +179,7 @@ body {
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 50%;
+    top: 30%;
     left: 50%;
     background: #222;
     z-index: -100;
@@ -187,25 +188,21 @@ body {
 
 /* TRANSICION */
 
-.loader.codo-a-codo{
-    height: 70vh;
-}
-
 .loader.codo-a-codo::before{
     content: '';
     position: absolute;
     height: 400px;
     width: 700px;
-    top: calc(50% - 100px);
+    top: calc(30% - 100px);
     left: calc(50% - 350px);
     transform: skew(-20deg);
-    background: yellow;
+    background: hsl(51, 97%, 51%);
 }
 
 .loader .semi-circulo.codo-a-codo {
     transform: rotate(90deg) scale(80%);
     left: calc(50% - 250px);
-    top: calc(50% - 80px)
+    top: calc(30% - 80px)
 }
 
 .loader .semi-circulo.codo-a-codo::after{
@@ -223,7 +220,7 @@ body {
 }
 
 .loader .pelota1.codo-a-codo {
-    top: calc(50% + 25px);
+    top: calc(30% + 25px);
     left: calc(50% - 120px);
 }
 
@@ -242,14 +239,14 @@ body {
     content: '';
     position: absolute;
     width: 15px;
-    height: 80px;
+    height: 75px;
     background: #222;
-    top: -30px;
+    top: -25px;
     left: 85px;
 }
 
 .loader .pelota2.codo-a-codo {
-    top: calc(50% + 25px);
+    top: calc(30% + 25px);
     left: calc(50% + 80px);
 }
 
@@ -258,7 +255,7 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: #222;
+    background: #fff;
     border-radius: 50%;
     top: 0;
     left: 60px;
@@ -269,7 +266,7 @@ body {
     position: absolute;
     width: 15px;
     height: 50px;
-    background: #222;
+    background: #fff;
     top: 0px;
     left: 95px;
 }
@@ -278,7 +275,7 @@ body {
     position: absolute;
     height: 50px;
     width: 50px;
-    top: calc(50% + 60px);
+    top: calc(30% + 70px);
     background: #222;
     border-radius: 50%;
 }
@@ -298,8 +295,8 @@ body {
     content: '';
     position: absolute;
     width: 15px;
-    height: 80px;
-    top: -30px;
+    height: 75px;
+    top: -25px;
     left: 85px;
     background: #222;
 }
@@ -308,27 +305,11 @@ body {
     position: absolute;
     height: 50px;
     width: 50px;
-    top: calc(50% + 60px);
+    top: calc(30% + 70px);
     background: #222;
     border-radius: 50%;
 }
 
-/* .loader .pelota2.pelota.codo-a-codo .pelota2b::after{
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: 0;
-    left: 50px;
-    background: yellow;
-    border-radius: 50%;
+.fin{
+    display: none;
 }
-.loader .pelota2.pelota.codo-a-codo .pelota2b::before{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 50px;
-    top: 0px;
-    left: 85px;
-    background: yellow;
-} */
