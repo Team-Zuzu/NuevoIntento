@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="nombre">
+        <label for="nombre">Nombre</label>
+        <br>
+        <input type="text" id="apellido">
+        <label for="apellido">Apellido</label>
+        <br>
+        <input type="text" id="usuario">
+        <label for="usuario">Usuario</label>
+        <br>
+        <input type="text" id="pass">
+        <label for="pass">Contraseña</label>
+        <br>
+        <input type="button" onclick="validar()" value="Validar">
+    </form>
+
+    <script>
+        const nombre = document.querySelector('#nombre')
+        const pass = document.querySelector('#pass')
+
+        function esMayuscula(cad) {
+            return cad >= 'A' && cad <= 'Z'
+        }
+        function esMinuscula(cad) {
+            return cad >= 'a' && cad <= 'z'
+        }
+        function esNumero(cad) {
+            return !isNaN(cad)
+        }
+        function esLetra(cad) {
+            return esMayuscula(cad) || esMinuscula(cad)
+        }
+
+        function validar() {
+            let i = 0
+
+            if(pass.value.length < 8){
+                alert('La contraseña debe tener al menos 8 caracteres')
+            }
+
+            let mayuscula = false
+            while (i < pass.value.length && mayuscula == false) {
+                if (esMayuscula(pass.value[i]))
+                    mayuscula = true
+                i++
+            }
+            mayuscula ? '' : alert('La contraseña debe tener al menos una mayuscula')
+
+            i = 0
+            let numero = false
+            while (i < pass.value.length && numero == false) {
+                if (esNumero(pass.value[i]))
+                    numero = true
+                i++
+            }
+            numero ? '' : alert('La contraseña debe tener al menos un número')
+
+            i = 0
+            let especial = false
+            while (i < pass.value.length && especial == false) {
+                console.log(pass.value[i])
+                if (
+                    !(esNumero(pass.value[i]) ||
+                        esLetra(pass.value[i]))
+                )
+                    especial = true
+                i++
+            }
+            especial ? '' : alert('La contraseña debe tener al menos un caracter especial')
+        }
+
+        // .charCodeAt(n) devuelve un número indicando el valor Unicode del carácter en el índice proporcionado.
+        // console.log('~'.charCodeAt(0))
+
+    </script>
+
+</body>
+
+</html>
