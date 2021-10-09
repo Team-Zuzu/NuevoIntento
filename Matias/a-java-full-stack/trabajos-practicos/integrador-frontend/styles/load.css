@@ -1,9 +1,9 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    overflow: hidden;
+.loader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    transition: 0.75s;
 }
 
 .flash {
@@ -12,14 +12,6 @@ body {
     width: 100%;
     background: transparent;
     z-index: 1000;
-}
-
-.loader {
-    background: #fff;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    transition: 0.75s;
 }
 
 .loader .semi-circulo {
@@ -195,6 +187,18 @@ body {
     background: hsl(51, 97%, 51%);
 }
 
+.loader.codo-a-codo::after{
+    content: '';
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    z-index: 200;
+    top: calc(30% + 150px);
+    left: calc(50% + 205px);
+    transform: skew(-20deg);
+    background: #fff;
+}
+
 .loader .semi-circulo.codo-a-codo {
     transform: rotate(90deg) scale(80%);
     left: calc(50% - 250px);
@@ -206,7 +210,7 @@ body {
     position: absolute;
     width: 190px;
     height: 100px;
-    transform: translate(220px);
+    transform: translate(220px, 85px);
     border-bottom: 100px solid #222;
     border-radius: 50%;
 }
@@ -272,6 +276,7 @@ body {
     height: 50px;
     width: 50px;
     top: calc(30% + 70px);
+    left: -34px;
     background: #222;
     border-radius: 50%;
 }
@@ -302,12 +307,19 @@ body {
     height: 50px;
     width: 50px;
     top: calc(30% + 70px);
+    left: -34px;
     background: #222;
     border-radius: 50%;
 }
 
+/* FIN */
+
 body.fin {
     overflow:auto;
+}
+
+header.fin, main.fin, footer.fin{
+    display:block;
 }
 
 .loader.fin {

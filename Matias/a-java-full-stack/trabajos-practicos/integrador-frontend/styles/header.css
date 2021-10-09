@@ -1,3 +1,7 @@
+header{
+    display: none;
+}
+
 header .navbar {
     position: fixed;
     width: 100%;
