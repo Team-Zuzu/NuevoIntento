@@ -18,18 +18,18 @@ setTimeout(() => {
     dosSegundos = true
 }, 2500)
 
-// const disparador = setInterval(() => {
-//     if (dosSegundos && cargaTerminada) {
-//         clearInterval(disparador)
-//         loader.classList.add('carga-terminada')
-//         setTimeout(() => {
-//             loader.classList.add('codo-a-codo')
-//         }, 1250);
-//         setTimeout(() => {
-//             fin()
-//         }, 3000)
-//     }
-// }, 200);
+const disparador = setInterval(() => {
+    if (dosSegundos && cargaTerminada) {
+        clearInterval(disparador)
+        loader.classList.add('carga-terminada')
+        setTimeout(() => {
+            loader.classList.add('codo-a-codo')
+        }, 1250);
+        setTimeout(() => {
+            fin()
+        }, 3000)
+    }
+}, 200);
 
-loader.classList.add('carga-terminada')
-loader.classList.add('codo-a-codo')
+// loader.classList.add('carga-terminada')
+// loader.classList.add('codo-a-codo')
