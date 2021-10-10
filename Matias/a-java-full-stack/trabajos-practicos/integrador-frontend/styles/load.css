@@ -1,9 +1,27 @@
+/* 
+    ANOTACIÓN PERSONAL: 
+    El orden de las letras es un desastre. Tendría que haberlo pensado mejor antes de ponerme a cordear. 
+        El orden de las letras es: 
+            C O D O A 
+             C O D O
+        Esto responde a:
+            sc1 p1 p1c p2 p2c
+            sc2 p1b p1d p2b
+        sc -> semi-circulo
+        p -> pelota
+    Fuera de eso, los before fueron usados para crear los palitos de ciertas letras mientras que los after fueron usados para hacer sus "agujeros" (que en realidad son circulos amarillos)
+
+    RECORDATORIO: 
+    No incluir IDs en animaciones, complican las cosas al codear (por la especificidad)
+*/
+
 .loader {
     position: fixed;
     height: 100vh;
     width: 100%;
     background: #fff;
     transition: 0.75s;
+    /* transform: scale(50%); */
 }
 
 .flash {
@@ -16,12 +34,15 @@
 
 .loader .semi-circulo {
     position: absolute;
-    top: calc(50% - 100px);
-    left: calc(50% - 100px);
     width: 200px;
     height: 200px;
     border-bottom: 100px solid #222;
     border-radius: 50%;
+}
+
+.loader .semi-circulo1 {
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
     animation: girar 2s linear infinite;
 }
 
@@ -40,6 +61,7 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    z-index: 200;
 }
 
 .loader .pelota1 {
@@ -92,12 +114,13 @@
 
 /* SECCIÓN CARGA-TERMINADA */
 
-.flash.carga-terminada {
+.loader.carga-terminada .flash {
     background: transparent;
     animation: flash 0.5s linear 1;
 }
 
 @keyframes flash {
+    /* Esta animación permite ordenar rápidamente los elementos para formar la sonrisa sin que sea del todo visible para el usuario */
     0% {
         background: #fff;
     }
@@ -106,25 +129,23 @@
     }
 }
 
-.loader .semi-circulo.carga-terminada {
-    border-bottom: 100px solid #222;
-    /* transform: rotate(90deg); */
+.loader.carga-terminada .semi-circulo1 {
+    animation: none;
+    transform: rotate(0deg);
+    transition: 0.75s;
+}
+
+.loader.carga-terminada .pelota {
     animation: none;
     transition: 0.75s;
 }
 
-.loader .pelota.carga-terminada {
-    animation: none;
-    transition: 0.75s;
-}
-
-.loader .pelota1.carga-terminada {
+.loader.carga-terminada .pelota1 {
     top: calc(50% - 100px);
     left: calc(50% - 100px);
-    background: #222;
 }
 
-.loader .pelota2.carga-terminada {
+.loader.carga-terminada .pelota2 {
     top: calc(50% - 100px);
     left: calc(50% + 50px);
 }
@@ -133,13 +154,14 @@
 
 /* DECLARACIÓN */
 
-.loader::before {
+.loader .pelota::after {
     content: '';
     position: absolute;
-    top: calc(30% - 100px);
-    left: calc(50% - 150px);
-    height: 200px;
-    width: 350px;
+    height: 25px;
+    width: 25px;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
     background: transparent;
     transition: 0.75s;
 }
@@ -147,30 +169,32 @@
 .loader .semi-circulo::after {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: -100;
+    height: 100px;
+    width: 100px;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+    background: transparent;
     transition: 0.75s;
 }
 
-.loader .pelota::after {
+.loader.codo-a-codo .semi-circulo::before {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: -100;
+    height: 25px;
+    width: 40px;
+    right: 0%;
+    top: 37%;
+    background: transparent;
     transition: 0.75s;
 }
 
-.loader .pelota::before {
+.loader::before {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 30%;
-    left: 50%;
-    background: #222;
-    z-index: -100;
+    height: 100vh;
+    width: 100%;
+    background: hsl(51, 97%, 51%);
     transition: 0.75s;
 }
 
@@ -187,141 +211,148 @@
     background: hsl(51, 97%, 51%);
 }
 
-.loader.codo-a-codo::after{
-    content: '';
-    position: absolute;
-    height: 150px;
+.loader.codo-a-codo .semi-circulo {
     width: 100px;
-    z-index: 200;
-    top: calc(30% + 150px);
-    left: calc(50% + 205px);
-    transform: skew(-20deg);
-    background: #fff;
-}
-
-.loader .semi-circulo.codo-a-codo {
-    transform: rotate(90deg) scale(80%);
-    left: calc(50% - 250px);
-    top: calc(30% - 80px)
-}
-
-.loader .semi-circulo.codo-a-codo::after {
-    content: '';
-    position: absolute;
-    width: 190px;
     height: 100px;
-    transform: translate(220px, 85px);
-    border-bottom: 100px solid #222;
-    border-radius: 50%;
-}
-
-.loader .pelota.codo-a-codo {
-    transform: scale(200%)
-}
-
-.loader .pelota1.codo-a-codo {
-    top: calc(30% + 25px);
-    left: calc(50% - 120px);
-}
-
-.loader .pelota1.codo-a-codo::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
+    border-bottom: none;
     background: #222;
-    border-radius: 50%;
-    top: 0;
-    left: 50px;
 }
 
-.loader .pelota1.codo-a-codo::before {
-    content: '';
+.loader.codo-a-codo .semi-circulo::before {
+    /* content: '';
     position: absolute;
-    width: 15px;
-    height: 75px;
-    background: #222;
-    top: -25px;
-    left: 85px;
+    height: 25px;
+    width: 40px;
+    right: 0%;
+    top: 37%; */
+    z-index: 1000;
+    background: hsl(51, 97%, 51%);
 }
 
-.loader .pelota2.codo-a-codo {
-    top: calc(30% + 25px);
-    left: calc(50% + 80px);
-}
-
-.loader .pelota2.codo-a-codo::after {
-    content: '';
-    position: absolute;
-    width: 50px;
+.loader.codo-a-codo .semi-circulo::after {
+    /* content: '';
+    position: absolute; */
     height: 50px;
+    width: 50px;
+    /* top: 25%;
+    left: 25%; */
+    z-index: 1000;
+    /* border-radius: 50%; */
+    background: hsl(51, 97%, 51%);
+}
+
+.loader.codo-a-codo .semi-circulo1 {
+    left: calc(50% - 250px);
+    top: calc(50% - 140px);
+    transform: rotate(0deg)
+}
+
+.loader.codo-a-codo .semi-circulo2 {
+    left: -65px;
+    top: 167px;
+}
+
+.loader.codo-a-codo .pelota {
+    height: 100px;
+    width: 100px;
+}
+
+.loader.codo-a-codo .pelota::after {
+    /* content: '';
+    position: absolute; */
+    height: 50px;
+    width: 50px;
+    /* top: 25%;
+    left: 25%;
+    border-radius: 50%; */
+    background: hsl(51, 97%, 51%);
+    z-index: 2000;
+}
+
+.loader.codo-a-codo .letra-d::before {
+    content: '';
+    position: absolute;
+    height: 140px;
+    width: 25px;
+    bottom: 0;
+    right: 0;
+    background: #222;
+    z-index: 1000;
+}
+
+.loader.codo-a-codo .letra-a::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 25px;
+    bottom: 0;
+    right: 0;
     background: #fff;
-    border-radius: 50%;
-    top: 0;
-    left: 60px;
+    z-index: 1000;
 }
 
-.loader .pelota2.codo-a-codo::before {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 50px;
+.loader.codo-a-codo .pelota1 {
+    top: calc(50% - 140px);
+    left: calc(50% - 140px);
+}
+
+.loader.codo-a-codo .pelota1b {
+    top: 170px;
+    left: -65px;
+}
+
+.loader.codo-a-codo .pelota1c {
+    left: 110px;
+}
+
+.loader.codo-a-codo .pelota1d {
+    top: 170px;
+    left: 45px;
+}
+
+.loader.codo-a-codo .pelota2 {
+    top: calc(30% - 7px);
+    left: calc(50% + 83px);
+}
+
+.loader.codo-a-codo .pelota2b {
+    top: 170px;
+    left: -65px;
+}
+
+.loader.codo-a-codo .pelota2c {
+    left: 120px;
     background: #fff;
-    top: 0px;
-    left: 95px;
-}
-
-.loader .pelota1.pelota.codo-a-codo .pelota1b {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: calc(30% + 70px);
-    left: -34px;
-    background: #222;
-    border-radius: 50%;
-}
-
-.loader .pelota1.pelota.codo-a-codo .pelota1b::after {
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: 0;
-    left: 50px;
-    background: #222;
-    border-radius: 50%;
-}
-
-.loader .pelota1.pelota.codo-a-codo .pelota1b::before {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 75px;
-    top: -25px;
-    left: 85px;
-    background: #222;
-}
-
-.loader .pelota2.pelota.codo-a-codo .pelota2b {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: calc(30% + 70px);
-    left: -34px;
-    background: #222;
-    border-radius: 50%;
 }
 
 /* FIN */
 
 body.fin {
-    overflow:auto;
+    overflow: auto;
 }
 
-header.fin, main.fin, footer.fin{
-    display:block;
+header.fin, main.fin, footer.fin {
+    display: block;
 }
 
 .loader.fin {
     display: none;
+}
+
+@media (max-width: 800px) {
+    .loader {
+        transform: scale(50%);
+    }
+    .loader .flash {
+        height: 200vh;
+        width: 200%;
+        top: -50%;
+        left: -50%;
+    }
+    .loader::before {
+        height: 200vh;
+        width: 200%;
+        top: -50%;
+        left: -50%;
+    }
 }
