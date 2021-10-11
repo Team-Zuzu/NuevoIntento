@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid cyan;
+}
+
+header{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+header img{
+    width: 150px;
+    height: 100px;
+    margin-left: 150px;
+}
+
+header span{
+    margin-right: auto;
+}
+
+header nav{
+    margin-right: 150px;
+}
+
+header nav a{
+    padding-right: 25px;
+    text-decoration: none;
+    color: rgb(122, 121, 121);
+}
