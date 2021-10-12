@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    /* outline: 5px solid red; */
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    height: 200vh;
+    width: 100%;
+    /* background: linear-gradient(black, #fff); */
+}
+
+.parallax-contenedor {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: hsl(0, 0%, 30%);
+    overflow: hidden;
+}
+
+.parallax-contenedor div {
+    position: absolute;
+}
+
+/* SUELO */
+
+.parallax-contenedor .capa1 {
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: grey;
+    z-index: 1000;
+}
+.parallax-contenedor .capa1 div{
+    bottom: 100%;
+    background: hsl(0, 0%, 75%);
+}
+.parallax-contenedor .capa1 div:nth-child(1) {
+    height: 300px;
+    width: 150px;
+    left: 0;
+}
+.parallax-contenedor .capa1 div:nth-child(2) {
+    height: 500px;
+    width: 400px;
+    left: 150px;
+}
+.parallax-contenedor .capa1 div:nth-child(3) {
+    height: 400px;
+    width: 300px;
+    left: 910px;
+}
+
+.parallax-contenedor .capa2{
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    background: hsl(0, 0%, 45%);
+    z-index: 900;
+}
+.parallax-contenedor .capa2 div{
+    bottom: 100%;
+    background: hsl(0, 0%, 40%);
+}
+.parallax-contenedor .capa2 div:nth-child(1){
+    height: 200px;
+    width: 100px;
+    left: 600px;
+}
+.parallax-contenedor .capa2 div:nth-child(2){
+    height: 300px;
+    width: 100px;
+    left: 500px;
+}
+.parallax-contenedor .capa2 div:nth-child(3){
+    height: 250px;
+    width: 200px;
+    left: 300px;
+}
+.parallax-contenedor .capa2 div:nth-child(4){
+    height: 500px;
+    width: 100px;
+    left: 750px;
+}
+.parallax-contenedor .capa2 div:nth-child(5){
+    height: 250px;
+    width: 100px;
+    left: 1200px;
+}
+.parallax-contenedor .capa2 div:nth-child(6){
+    height: 200px;
+    width: 300px;
+    left: 1300px;
+}
