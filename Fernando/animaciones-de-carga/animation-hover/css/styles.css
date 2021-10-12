@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.loader:hover{
+    background: cyan;
+    box-shadow: 0 0 5px cyan,
+                0 0 25px cyan,
+                0 0 50px cyan,
+                0 0 200px cyan;
+    
+}
