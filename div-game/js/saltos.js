@@ -2,6 +2,7 @@ const jugador = {
     objeto: document.querySelector('#jugador'),
     alto: 50,
     ancho: 50,
+    sobreSuelo: false
 }
 const herido = {
     estaHerido: false,
@@ -16,10 +17,15 @@ const salto = {
     saltoIniciado: false,
     fuerza: 20,
     gravedad: 0.5,
-    tiempoSalto: 0
+    tiempoSalto: 0,
+}
+const giro = {
+    grados: 0,
+    velocidad: 6
 }
 const movimiento = {
-    direccion: 'c',
+    derecha: false,
+    izquierda: false,
     velocidad: 3
 }
 const juego = {
@@ -42,6 +48,7 @@ const pantalla = {
 function iniciarJuego() {
     jugador.objeto.style.bottom = 0 + 'px'
     jugador.objeto.style.left = 0 + 'px'
+    jugador.objeto.style.transform = `rotate(${0}deg)`
     zonaDeJuego.objeto.style.width = zonaDeJuego.ancho + 'px'
     zonaDeJuego.objeto.style.height = zonaDeJuego.alto + 'px'
     zonaDeJuego.objeto.style.bottom = 0 + 'px'
@@ -53,75 +60,72 @@ setInterval(() => {
     update()
 }, 1000 / 60);
 
+document.addEventListener('keydown', botonDown => {
+    if (botonDown.key == ' ') salto.saltoIniciado = true
+    if (botonDown.key == 'd') movimiento.derecha = true
+    if (botonDown.key == 'a') movimiento.izquierda = true
+})
+document.addEventListener('keyup', botonUp => {
+    if (botonUp.key == 'd') movimiento.derecha = false
+    if (botonUp.key == 'a') movimiento.izquierda = false
+})
 function update() {
-    if (salto.saltoIniciado)
+    if (salto.saltoIniciado) {
+        rotacion()
         fSalto()
+    }
     fMovimiento()
     colision()
     marchaEnemiga()
 }
-
-document.addEventListener('keydown', boton => {
-    if (boton.key == ' ') {
-        salto.saltoIniciado = true
+function rotacion() {
+    giro.grados += giro.velocidad
+    if (giro.grados > 360) {
+        giro.grados = 0
     }
-})
-document.addEventListener('mousemove', mouse => {
-    let zonas = window.visualViewport.width / 3
-    if (mouse.pageX < zonas) {
-        movimiento.direccion = 'i'
-    }
-    else if (mouse.pageX < zonas * 2) {
-        movimiento.direccion = 'c'
-    }
-    else {
-        movimiento.direccion = 'd'
-    }
-})
-
-function fMovimiento() {
-    switch (movimiento.direccion) {
-        case 'i':
-            if (parseInt(jugador.objeto.style.left) > 0)
-                jugador.objeto.style.left = parseInt(jugador.objeto.style.left) - movimiento.velocidad + 'px'
-            break
-        case 'd':
-            if (parseInt(jugador.objeto.style.left) < zonaDeJuego.ancho - jugador.ancho)
-                jugador.objeto.style.left = parseInt(jugador.objeto.style.left) + movimiento.velocidad + 'px'
-            break
-        default:
-            break
-    }
+    jugador.objeto.style.transform = `rotate(${giro.grados}deg)`
 }
-
+function finRotacion(){
+    if(giro.grados < 45) giro.grados = 0
+    else if (giro.grados < 135) giro.grados = 90
+    else if (giro.grados < 225) giro.grados = 180
+    else if (giro.grados < 315) giro.grados = 270
+    else giro.grados = 0
+    jugador.objeto.style.transform = `rotate(${giro.grados}deg)`
+}
 function fSalto() {
     if (parseInt(jugador.objeto.style.bottom) >= 0) {
-        jugador.objeto.style.bottom = - Math.pow(salto.tiempoSalto, 2) + salto.tiempoSalto * salto.fuerza + 'px'
+        jugador.objeto.style.bottom = - Math.pow(salto.tiempoSalto, 2) + salto.fuerza * salto.tiempoSalto + 'px'
         salto.tiempoSalto += salto.gravedad
     }
     else {
         jugador.objeto.style.bottom = 0 + 'px'
         salto.tiempoSalto = 0
         salto.saltoIniciado = false
+        finRotacion()
     }
+}
+function fMovimiento() {
+    if (movimiento.derecha && parseInt(jugador.objeto.style.left) < zonaDeJuego.ancho - jugador.ancho)
+        jugador.objeto.style.left = parseInt(jugador.objeto.style.left) + movimiento.velocidad + 'px'
+    if (movimiento.izquierda && parseInt(jugador.objeto.style.left) > 0)
+        jugador.objeto.style.left = parseInt(jugador.objeto.style.left) - movimiento.velocidad + 'px'
 }
 
 const posX = elemento => parseInt(elemento.style.left)
 const posY = elemento => parseInt(elemento.style.bottom)
-
 function colision() {
     for (let i = 0; i < enemigos.objeto.length; i++) {
         if (posX(jugador.objeto) > posX(enemigos.objeto[i]) - jugador.ancho &&
-            posX(jugador.objeto) - jugador.ancho < posX(enemigos.objeto[i])) {
-            if (posY(jugador.objeto) > posY(enemigos.objeto[i]) - jugador.alto &&
-                posY(jugador.objeto) - jugador.alto < posY(enemigos.objeto[i])) {
-                if (!herido.estaHerido) fueHerido()
-            }
-        }
+            posX(jugador.objeto) - jugador.ancho < posX(enemigos.objeto[i]) &&
+            posY(jugador.objeto) > posY(enemigos.objeto[i]) - jugador.alto &&
+            posY(jugador.objeto) - jugador.alto < posY(enemigos.objeto[i]))
+
+            if (!herido.estaHerido) fueHerido()
     }
 }
 
-function sacudida(){
+function sacudida() {
     let fuerzaActual = terremoto.fuerza
     const animTerremoto = setInterval(() => {
         zonaDeJuego.objeto.style.bottom = Math.random() * fuerzaActual + 'px'
@@ -129,7 +133,7 @@ function sacudida(){
         fuerzaActual -= terremoto.caida
     }, 50);
     setTimeout(() => {
-        clearInterval(animTerremoto)  
+        clearInterval(animTerremoto)
     }, 1000);
 }
 

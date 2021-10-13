@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -22,6 +22,15 @@ main {
     left: 200px;
     bottom: 0;
     background: blue;
+}
+
+.suelo{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 200px;
+    bottom: 0;
+    background: green;
 }
 
 #pantalla{
@@ -59,4 +68,5 @@ main {
     left: 0;
     bottom: 0;
     background: red;
+    
 }
