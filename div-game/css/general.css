@@ -24,39 +24,36 @@ main {
     background: blue;
 }
 
-.suelo{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    left: 200px;
-    bottom: 0;
-    background: green;
-}
-
-#pantalla{
+#pantalla {
+    position: relative;
     border: 2px solid grey;
     border-radius: 20px;
     overflow: hidden;
 }
 
-#pantalla.herido{
+#fondo {
+    overflow: hidden;
+    position: absolute;
+}
+
+#pantalla.herido {
     animation: herido 1s linear 1;
 }
 
 @keyframes herido {
-    0%{
+    0% {
         background: rgb(156, 0, 1);
     }
-    50%{
+    50% {
         background: rgba(156, 0, 1, 0.6);
     }
-    100%{
+    100% {
         background: transparent
     }
 }
 
 #zona-de-juego {
-    position: relative;
+    /* position: absolute; */
     width: 600px;
     height: 400px;
 }
@@ -68,5 +65,4 @@ main {
     left: 0;
     bottom: 0;
     background: red;
-    
 }
