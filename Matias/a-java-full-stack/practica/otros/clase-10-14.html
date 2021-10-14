@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            /* font-size: 1em; */
+            font-family: Helvetica, sans-serif;
+            /* font-weight: 600; */
+            margin: 10px;
+        }
+        body{
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+    <title>VUE II</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div v-if="producto.stock>0">
+            <p>Código: {{producto.cod}}</p>
+            <p>Descripcion: {{producto.descripcion}}</p>
+            <p>Precio: {{producto.precio}}</p>
+            <img :src="producto.imagen" :alt="producto.mensaje">
+            <p>Stock: {{producto.stock}}</p>
+            <p>Cantidad: {{cantidad}}</p>
+            <input type="number" v-model="cantidad" >
+            <button v-on:click="comprar()">Comprar</button>
+
+            <hr>
+
+            <p>Nombre: {{nombre}}</p>
+            <p>Email: {{email}}</p>
+            <p>Telefono: {{tel}}</p>
+            <button v-on:click="cargarDatos()">Cargar datos</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./clase-10-14.js"></script>
+</body>
+
+</html>

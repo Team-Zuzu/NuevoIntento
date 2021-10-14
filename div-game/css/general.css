@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
     /* outline: 1px solid red; */
     box-sizing: border-box;
@@ -37,7 +38,7 @@ main {
     z-index: -1000;
 }
 
-#fondo::before{
+#fondo::before {
     content: '';
     position: absolute;
     height: 300px;
@@ -78,4 +79,31 @@ main {
     left: 0;
     bottom: 0;
     background: red;
+}
+
+#corazones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    display: flex;
+    flex: row;
+}
+
+#corazones img {
+    width: 30px;
+    height: 30px;
+}
+
+#score {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    margin: 12px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }

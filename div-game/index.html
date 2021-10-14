@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/loby.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
-
-        <div id="pantalla">
-            <div id="fondo"></div>
-            <div id="zona-de-juego">
-                <div id="jugador"></div>
-            </div>
+        <div id="loby">
+            <nav>
+                <button onclick="jugar()">Jugar</button>
+                <button>Tabla de puntos</button>
+                <button>Creditos</button>
+            </nav>
         </div>
     </main>
-
-    <script src="./js/saltos.js"></script>
-    <script src="./js/fondo.js"></script>
-    <script src="./js/parallax.js"></script>
+    <script src="./js/gestor.js"></script>
+    <script src="./js/juego.js"></script>
 </body>
 
 </html>

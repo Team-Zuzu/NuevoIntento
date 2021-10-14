@@ -20,14 +20,6 @@ function crearImagen(i, j) {
     return nuevaCapa
 }
 
-for (let j = 0; j < 6; j++) {
-    let aux = []
-    for (let i = 0; i < 2; i++) {
-        aux.push(crearImagen(i, j))
-    }
-    capas.push(aux)
-}
-
 function mover(array, movimiento) {
     for (let i = 0; i < array.length; i++) {
         let posicion = parseInt(array[i].style.left) - movimiento
@@ -38,6 +30,17 @@ function mover(array, movimiento) {
         array[i].style.left = posicion + 'px'
     }
 }
+
+function crearCapas() {
+    for (let j = 0; j < 6; j++) {
+        let aux = []
+        for (let i = 0; i < 2; i++) {
+            aux.push(crearImagen(i, j))
+        }
+        capas.push(aux)
+    }
+}
+crearCapas()
 
 setInterval(() => {
     mover(capas[0], 1)
