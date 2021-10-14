@@ -29,7 +29,8 @@ const movimiento = {
     velocidad: 3
 }
 const juego = {
-    dificultad: 50
+    dificultad: 50,
+    inicio: false
 }
 let enemigos = {
     objeto: [],
@@ -47,7 +48,7 @@ const pantalla = {
 
 function iniciarJuego() {
     jugador.objeto.style.bottom = 0 + 'px'
-    jugador.objeto.style.left = 0 + 'px'
+    jugador.objeto.style.left = 200 + 'px'
     jugador.objeto.style.transform = `rotate(${0}deg)`
     zonaDeJuego.objeto.style.width = zonaDeJuego.ancho + 'px'
     zonaDeJuego.objeto.style.height = zonaDeJuego.alto + 'px'
@@ -85,8 +86,8 @@ function rotacion() {
     }
     jugador.objeto.style.transform = `rotate(${giro.grados}deg)`
 }
-function finRotacion(){
-    if(giro.grados < 45) giro.grados = 0
+function finRotacion() {
+    if (giro.grados < 45) giro.grados = 0
     else if (giro.grados < 135) giro.grados = 90
     else if (giro.grados < 225) giro.grados = 180
     else if (giro.grados < 315) giro.grados = 270
@@ -173,11 +174,15 @@ setInterval(() => {
 }, 1000);
 
 function marchaEnemiga() {
-    for (let i = 0; i < enemigos.objeto.length; i++) {
-        enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad + 'px'
-        if (parseInt(enemigos.objeto[i].style.left) + enemigos.ancho < 0) {
-            enemigos.objeto.shift()
-            zonaDeJuego.objeto.removeChild(zonaDeJuego.objeto.children[1])
+    if (juego.inicio) {
+        for (let i = 0; i < enemigos.objeto.length; i++) {
+            enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad + 'px'
+            if (parseInt(enemigos.objeto[i].style.left) + enemigos.ancho < 0) {
+                enemigos.objeto.shift()
+                zonaDeJuego.objeto.removeChild(zonaDeJuego.objeto.children[1])
+            }
         }
     }
 }
+
+document.addEventListener('mousedown', raton => juego.inicio = true)

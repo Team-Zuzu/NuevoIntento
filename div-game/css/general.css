@@ -1,5 +1,5 @@
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     box-sizing: border-box;
 }
 
@@ -26,7 +26,6 @@ main {
 
 #pantalla {
     position: relative;
-    border: 2px solid grey;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -34,6 +33,20 @@ main {
 #fondo {
     overflow: hidden;
     position: absolute;
+    background: #fddac6;
+    z-index: -1000;
+}
+
+#fondo::before{
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    right: -100px;
+    top: -75px;
+    border-radius: 50%;
+    z-index: -900;
+    background: #fef9f6;
 }
 
 #pantalla.herido {
