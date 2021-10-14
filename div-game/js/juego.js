@@ -33,7 +33,8 @@ function aJugar() {
     }
     const juego = {
         dificultad: 50,
-        inicio: false
+        inicio: false,
+        velocidadSpam: 1000
     }
     let enemigos = {
         objeto: [],
@@ -81,14 +82,26 @@ function aJugar() {
         fMovimiento()
         colision()
         marchaEnemiga()
-        sumarPuntos()
+        if (juego.inicio)
+            sumarPuntos()
     }
 
     idPuntos = document.querySelector('#score').children
-    console.log(idPuntos)
-    function sumarPuntos(){
+    function sumarPuntos() {
         jugador.puntos++
         idPuntos[0].innerText = Math.round(jugador.puntos / 15)
+        if (jugador.puntos > 0 && jugador.puntos % 500 == 0) {
+            aumentarDificultad()
+        }
+    }
+
+    function aumentarDificultad() {
+        juego.dificultad += 10
+        console.log('Dificultad: ' + juego.dificultad)
+        enemigos.velocidad = juego.dificultad / 10
+        console.log('Velocidad: ' + enemigos.velocidad)
+        if (juego.velocidadSpam > 500) juego.velocidadSpam -= 10
+        console.log(juego.velocidadSpam)
     }
 
     function rotacion() {
@@ -192,22 +205,55 @@ function aJugar() {
 
     setInterval(() => {
         let random = Math.round(Math.random() * 100)
-        if (random > juego.dificultad) {
+        if (random < juego.dificultad) {
             let nuevoEnemigo = document.createElement('div')
+
             nuevoEnemigo.classList.add('enemigo')
+
+            let numRandom = Math.random() * 100
+            console.log(numRandom)
+            if (numRandom < 100 / 4 * 1) {
+                nuevoEnemigo.classList.add('volador')
+                nuevoEnemigo.style.bottom = enemigos.alto * 2 + 'px'
+                nuevoEnemigo.style.background = 'green'
+            }
+            else if (numRandom < 100 / 4 * 2) {
+                
+                nuevoEnemigo.classList.add('volador2')
+                nuevoEnemigo.style.bottom = enemigos.alto * 2 + 'px'
+                nuevoEnemigo.style.background = 'yellow'
+            }
+            else {
+                nuevoEnemigo.style.bottom = 0 + 'px'
+            }
+
             nuevoEnemigo.style.left = zonaDeJuego.ancho + 'px'
-            nuevoEnemigo.style.bottom = 0 + 'px'
+
             nuevoEnemigo.style.width = enemigos.ancho + 'px'
             nuevoEnemigo.style.height = enemigos.alto + 'px'
             zonaDeJuego.objeto.insertAdjacentElement('beforeend', nuevoEnemigo)
             enemigos.objeto.push(nuevoEnemigo)
         }
-    }, 1000);
+    }, juego.velocidadSpam);
 
     function marchaEnemiga() {
         if (juego.inicio) {
             for (let i = 0; i < enemigos.objeto.length; i++) {
-                enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad + 'px'
+
+
+                if (enemigos.objeto[i].classList.contains('volador')) {
+                    enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad / 1.5 + 'px'
+                    enemigos.objeto[i].style.bottom = 75 + Math.sin(parseInt(enemigos.objeto[i].style.left) / 100) * 25 + 'px'
+                }
+                else if (enemigos.objeto[i].classList.contains('volador2')) {
+                    enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad / 1.5 + 'px'
+                    enemigos.objeto[i].style.bottom = 100 + Math.cos(parseInt(enemigos.objeto[i].style.left) / 100) * 50 + 'px'
+                }
+                else {
+                    enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad + 'px'
+                }
+
+
                 if (parseInt(enemigos.objeto[i].style.left) + enemigos.ancho < 0) {
                     enemigos.objeto.shift()
                     zonaDeJuego.objeto.removeChild(zonaDeJuego.objeto.children[3])
