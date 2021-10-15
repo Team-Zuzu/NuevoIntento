@@ -220,13 +220,13 @@ function aJugar() {
             if (numRandom < 100 / 4 * 1) {
                 nuevoEnemigo.classList.add('volador')
                 nuevoEnemigo.style.bottom = enemigos.alto * 2 + 'px'
-                nuevoEnemigo.style.background = 'green'
+                // nuevoEnemigo.style.background = 'green'
             }
             else if (numRandom < 100 / 4 * 2) {
                 
                 nuevoEnemigo.classList.add('volador2')
                 nuevoEnemigo.style.bottom = enemigos.alto * 2 + 'px'
-                nuevoEnemigo.style.background = 'yellow'
+                // nuevoEnemigo.style.background = 'yellow'
             }
             else {
                 nuevoEnemigo.style.bottom = 0 + 'px'
