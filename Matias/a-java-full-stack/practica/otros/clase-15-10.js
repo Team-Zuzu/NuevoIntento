@@ -1,7 +1,7 @@
 new Vue({
     el: "#breaking-bad",
     data: {
-        info: {},
+        info: '',
     },
     created() {
         this.cargaDatos("https://breakingbadapi.com/api/characters")
