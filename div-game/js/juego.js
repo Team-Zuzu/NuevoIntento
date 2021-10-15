@@ -175,10 +175,18 @@ function aJugar() {
             arrayCorazones.children[jugador.vidas].alt = 'Un corazón roto'
             juego.inicio = false
             clearInterval(intervaloMaestro)
+            muerto()
         }
         else {
             console.error('Hay un error raro en la función corazonRoto del archivo juego.js ¿Andás intentando hackear el juego? xDD')
         }
+    }
+
+    function muerto(){
+        sessionStorage.setItem("newScore", Math.round(jugador.puntos / 15))
+        setTimeout(() => {
+            tablaDePuntos()
+        }, 3000);
     }
 
     function fueHerido() {
@@ -207,11 +215,8 @@ function aJugar() {
         let random = Math.round(Math.random() * 100)
         if (random < juego.dificultad) {
             let nuevoEnemigo = document.createElement('div')
-
             nuevoEnemigo.classList.add('enemigo')
-
             let numRandom = Math.random() * 100
-            console.log(numRandom)
             if (numRandom < 100 / 4 * 1) {
                 nuevoEnemigo.classList.add('volador')
                 nuevoEnemigo.style.bottom = enemigos.alto * 2 + 'px'
@@ -252,8 +257,6 @@ function aJugar() {
                 else {
                     enemigos.objeto[i].style.left = parseInt(enemigos.objeto[i].style.left) - enemigos.velocidad + 'px'
                 }
-
-
                 if (parseInt(enemigos.objeto[i].style.left) + enemigos.ancho < 0) {
                     enemigos.objeto.shift()
                     zonaDeJuego.objeto.removeChild(zonaDeJuego.objeto.children[3])
@@ -316,7 +319,6 @@ function aJugar() {
                 array[i].style.left = posicion + 'px'
             }
         }
-
     }
 
     function crearCapas() {
