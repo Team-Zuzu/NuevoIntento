@@ -23,17 +23,53 @@ const secciones = {
     `,
     menu: `
     <div id="loby">
+        <h1>div&#35;game</h1>
         <nav>
             <button onclick="jugar()">Jugar</button>
             <button onclick="tablaDePuntos()">Tabla de puntos</button>
-            <button>Creditos</button>
+            <button onclick="creditos()">Creditos</button>
         </nav>
     </div>
-
+    `,
+    creditos: `
+    <div id="creditos">
+        <button onclick="menuPrincipal()">&#60;--</button>
+        <div>
+            <h1>Créditos</h1>
+            <h2>Programador</h2>
+            <p>Matías</p>
+            <h2>Diseño Conceptual</h2>
+            <p>Matías</p>
+            <h2>Artista Gráfico</h2>
+            <p>Matías</p>
+            <h2>Compositor</h2>
+            <p>Nadie :'c</p>
+            <h2>Publicista</h2>
+            <p>¿Ehh?</p>
+            <h2>Agradecimientos</h2>
+            <p>A mi gata por estar ser tan hermosa &#60;3</p>
+            <p>Al equipo de Codo a Codo por enseñarme a programar</p>
+            <p>A Fer por darme ánimos ;D</p>
+        </div>
+    </div>
     `
 }
 
-function menuPrincipal(){
+function creditos() {
+    let cont2 = 0
+    main.innerHTML = secciones.creditos
+    let elDiv = document.querySelector('#creditos').children[1]
+    elDiv.style.transform = 'translateY(0px)'
+    let intervaloCreditos = setInterval(() => {
+        elDiv.style.transform = `translateY(${--cont2}px)`
+        if (cont2 < -1300) {
+            clearInterval(intervaloCreditos)
+            menuPrincipal()
+        }
+    }, 1000 / 60);
+}
+
+function menuPrincipal() {
     main.innerHTML = secciones.menu
 }
 
@@ -60,10 +96,10 @@ function tablaDePuntos() {
         if (!totalScore) {
             newCad = secciones.score + `<p>No hay ningún<br>score registrado :C</p></div>`
         }
-        else {     
+        else {
             newCad += `
             <p>Tabla de puntos:</p>
-            `       
+            `
             let aux = JSON.parse(localStorage.getItem('totalScore'))
 
             if (aux[1] == undefined) {
@@ -80,7 +116,7 @@ function tablaDePuntos() {
                 </table></div>
                 `
             }
-            else{
+            else {
                 newCad += `
                 <table>
                     <tr>
@@ -130,7 +166,7 @@ function tablaDePuntos() {
             if (pruebaa[1] == undefined) {
                 aray.push(pruebaa)
             }
-            else{
+            else {
                 aray.push(...pruebaa)
             }
             aray.push(nuevoIngreso)

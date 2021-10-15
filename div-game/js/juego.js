@@ -196,10 +196,10 @@ function aJugar() {
         herido.estaHerido = true
         const parpadeo = setInterval(() => {
             setTimeout(() => {
-                jugador.objeto.style.backgroundColor = 'transparent'
+                jugador.objeto.style.backgroundColor = '#ffffff20'
             }, 200);
             setTimeout(() => {
-                jugador.objeto.style.backgroundColor = 'red'
+                jugador.objeto.style.backgroundColor = '#fff'
                 herido.cont++
             }, 400);
             if (herido.cont >= 5) {

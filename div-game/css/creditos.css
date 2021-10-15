@@ -1,0 +1,36 @@
+#creditos{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#creditos button{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 25px;
+}
+
+#creditos div{
+    max-width: 600px;
+    display: block;
+    position: relative;
+    top: 100%;
+}
+
+#creditos h1{
+    text-transform: uppercase;
+}
+
+#creditos h2{
+    font-size: 1.1em;
+}
+
+#creditos p{
+    color: #aaa;
+}
