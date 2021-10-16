@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btn {
+    margin: 0 2vw;
+    position: fixed;
+    top: calc(50% - 50px);
+}
+
+.btn:last-of-type {
+    right: 0;
+}
+
+#zona-de-cartas {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-img-top {
+    height: 200px;
+    object-fit: contain;
+}
+
+.card .card-title {
+    text-transform: capitalize;
+    text-align: center;
+}

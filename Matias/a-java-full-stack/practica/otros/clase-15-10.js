@@ -18,6 +18,6 @@ new Vue({
                     console.log('Hay un error raro e.e');
                     console.log(error)
                 })
-        }
+        },
     }
 })
