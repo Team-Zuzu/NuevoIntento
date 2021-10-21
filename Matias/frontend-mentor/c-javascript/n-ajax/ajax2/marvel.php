@@ -1,7 +1,7 @@
 <?php
     $conn = NULL;
         try{
-            $con = new PDO("mysql:host=localhost:3306; dbname=marvel; charset=utf8", 'root', 'HayUnErrorEnMiPHP');
+            $con = new PDO("mysql:host=127.0.0.1:3306; dbname=marvel; charset=utf8", 'root', '');
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
                 $sql = "SELECT * FROM characters WHERE id=$id";
