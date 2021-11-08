@@ -1,0 +1,18 @@
+img{
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+h5{
+    text-align: center;
+    text-transform: capitalize;
+
+    bottom: 0px;
+
+}
+
+.boton{
+    display: block;
+    text-align: center;
+}
