@@ -1,44 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-body, .matias, .matias a{
-    transition: 0.75s;
-}
 
 body{
     box-sizing: border-box;
     width: 30%;
     min-width: 350px;
+    transition: 0.75s;
 }
-body.active{
+body.matias{
     margin: 0%;
     height: 100%;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    background: #333;
-}
-.matias.active{
     font-family: 'Poppins', sans-serif;
     color: #fff;
+    background: #333;
 }
-.matias a.active{
-    color: #fff;
-}
-h2.active{
+body.matias h2{
     text-transform: uppercase;
     font-size: 2em;
     letter-spacing: 3px;
 }
-
-h1, .fernando{
+body.matias .my-section a{
+    color: #fff;
+}
+h1{
     transition: 0.5s;
 }
-h1.active{
+body.matias h1{
     transform: translateY(-200px);
     opacity: 0;
 }
-.fernando.active{
+.fernando{
+    transition: 0.5s;
+}
+body.matias .fernando{
     transform: translateY(200px);
     opacity: 0;
 }

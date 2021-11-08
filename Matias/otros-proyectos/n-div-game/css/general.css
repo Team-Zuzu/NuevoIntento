@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #222;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.enemigo {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 200px;
+    bottom: 0;
+    background: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.7);
+    border: 2px solid #111;
+}
+/* .enemigo::before{
+    content: '>:C';
+    display: block;
+    transform: rotate(90deg) translateX(10px) translateY(10px);
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+} */
+
+#pantalla {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#fondo {
+    overflow: hidden;
+    position: absolute;
+    background: #fddac6;
+    z-index: -1000;
+}
+
+#fondo::before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    right: -100px;
+    top: -75px;
+    border-radius: 50%;
+    z-index: -900;
+    background: #fef9f6;
+}
+
+#pantalla.herido {
+    animation: herido 1s linear 1;
+}
+
+@keyframes herido {
+    0% {
+        background: rgb(156, 0, 1);
+    }
+    50% {
+        background: rgba(156, 0, 1, 0.6);
+    }
+    100% {
+        background: transparent
+    }
+}
+
+#zona-de-juego {
+    /* position: absolute; */
+    width: 600px;
+    height: 400px;
+}
+
+#jugador {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 40px #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#corazones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    display: flex;
+    flex: row;
+}
+
+#corazones img {
+    width: 30px;
+    height: 30px;
+}
+
+#score {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    margin: 12px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

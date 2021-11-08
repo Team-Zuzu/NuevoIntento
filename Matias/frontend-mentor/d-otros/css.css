@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 1em;
+}
+img{
+    /* max-width: 200px;
+    object-fit: cover;
+    margin: 0.5em; */
+    max-width: 100%;
+    margin-bottom: 1em;
+    display: block;
+    border-radius: 20px;
+}
+.galery{
+    margin: 40px;
+    columns: 5 205px;
+    column-gap: 1em;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}

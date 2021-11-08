@@ -1,0 +1,121 @@
+
+JAVA
+
+public static void main(String[ ] args)
+
+    public: cualquiera puede acceder a él
+    static: el método se puede ejecutar sin crear una instancia de la clase que contiene el método principal
+    void: el método no devuelve ningún valor
+    main: el nombre del método
+
+Por ejemplo, el siguiente código declara un método llamado test, que no devuelve nada y no tiene parámetros:
+
+    void test()
+
+Los parámetros del método se declaran entre paréntesis que siguen al nombre del método.
+Para main, es un array de strings llamado args.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+A continuación, se muestra el cuerpo del método principal, entre llaves:
+
+    {
+        System.out.println("Hello World!");
+    }
+
+El método println imprime una línea de texto en la pantalla.
+La clase System.out se utiliza para acceder al método println.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Puede pasar un texto diferente como parámetro al método println para imprimirlo.
+
+class MyClass{
+    public static void main(String[] args){
+        System.out.println("I am learning Java");
+    }
+}
+
+En Java, cada declaración de código debe terminar con un punto y coma.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+class {
+    Apples {
+        public static void main (String[ ]args) {
+            System.out.println("Hello, World!");
+        }
+    }
+}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Ejemplo de declaración de variables: 
+
+class MyClass {
+    public static void main(String[] args){
+        String name = "Matias";
+        int age = 23;
+        double score = 15.9;
+        char group = 'Z';
+        boolean online = true;
+    }
+}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+import java.util.Scanner; 
+
+Para usar la clase Scanner, cree una instancia de la clase usando la siguiente sintaxis:
+
+    Scanner myVar = new Scanner(System.in);
+
+Ahora puede leer diferentes tipos de datos de entrada que ingresa el usuario.
+A continuación, se muestran algunos métodos que están disponibles a través de la clase Scanner:
+
+    Leer un byte - nextByte ()
+    Leer un breve - nextShort ()
+    Leer un int - nextInt ()
+    Leer un largo - nextLong ()
+    Leer un flotador - nextFloat ()
+    Leer un doble - nextDouble ()
+    Leer un booleano - nextBoolean ()
+    Leer una línea completa - nextLine ()
+    Leer una palabra - next ()
+
+Ejemplo de un programa utilizádolo para obtener la entrada del usuario:
+
+    import java.util.Scanner;
+    class MyClass {
+        public static void main(String[] args){
+            Scanner myVar = new Scanner(System.in);
+            System.out.println(myVar.nextLine());
+        }
+    }
+
+Otro ejemplo: 
+
+    import java.util.Scanner;
+    class Test {
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+            String st = sc.nextLine();
+        }
+    }
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+SWITCH ARROW:
+        int day = 60;
+        String dayType = switch (day) {
+            case 1, 2, 3, 4, 5 -> "Working day";
+            case 6, 7 -> "Weekend";
+            default -> "Invalid day";
+        };
+        System.out.println(dayType);
+
+
+
+
+
