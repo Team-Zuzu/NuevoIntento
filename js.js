@@ -19,7 +19,7 @@ const update = setInterval(() => {
         const lista = document.getElementById('lista')
         const li = document.createElement('li')
         const secretlink = document.createElement('a')
-        secretlink.href = './Matias/c-otros-proyectos/otros-proyectos.html'
+        secretlink.href = './Matias/otros-proyectos/otros-proyectos.html'
         secretlink.textContent = 'Otros Proyectos'
         li.appendChild(secretlink);
         lista.insertAdjacentElement('beforeend', li)

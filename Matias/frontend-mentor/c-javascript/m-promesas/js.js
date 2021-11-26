@@ -33,7 +33,10 @@ function getEmail(user) {
     return promise
 }
 
-getUser(1)
-    .then(user => getEmail(user))
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+for (let i = 0; i < users.length; i++) {
+    getUser(i + 1)
+        .then(user => getEmail(user))
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+}
+
