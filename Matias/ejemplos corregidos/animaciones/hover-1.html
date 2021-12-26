@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			/*------------- TRANSICIONES -------------*/
+			/* Truco: Si nos fijamos bien, este estilo se aplica sólo al mover el ratón sobre el enlace (transición de entrada). Sin embargo, si movemos el ratón fuera del enlace, no se produce transición sino que realiza el cambio de forma brusca. Si movemos las propiedades de transición al primer bloque (a {}), SE APLICARÁN TANTO EN LAS TRANSICIONES DE ENTRADA COMO DE SALIDA */
+
+			a {
+				background: #ddd;
+				color: #222;
+				padding: 2px;
+				border: 1px solid #aaa;
+			}
+
+			a:hover {
+				background: #fff;
+				color: #666;
+				padding: 8px 14px;
+				border: 1px solid #888;
+				/* a todas las propiedades nombradas */
+				transition-property: all;
+				/* con una duración de 0.5s */
+				transition-duration: 0.5s;
+				/* inicio lento, luego normal */
+				transition-timing-function: ease-in;
+			}
+		</style>
+		<title>Transiciones</title>
+	</head>
+
+	<body>
+		<a href="">Enlace</a>
+	</body>
+</html>
